@@ -9,5 +9,11 @@
             Defines a Duality core plugin.
             </summary>
         </member>
+        <member name="M:naves.NavigationSystem.#ctor(Duality.GameObject)">
+            <summary>
+            Initializes a new instance of the <see cref="T:naves.NavigationSystem"/> class.
+            </summary>
+            <param name="ship">The ship.</param>
+        </member>
     </members>
 </doc>
