@@ -28,6 +28,8 @@ namespace naves
         public float AceleratePower { get; set; } = 0f;
         public float WeaponPower { get; set; } = 0f;
 
+        public float Life { get; set; } = 100f;
+
         NavigationSystem navigation;
         PowerSystem power;
         private RadarSystem radarSystem;
@@ -82,12 +84,6 @@ namespace naves
                 if (DualityApp.Keyboard[Key.Space] && BulletPrefab != null && m_FiringDelayCounter > FiringDelay)
                 {
                     this.power.Fire(20);
-                    //m_FiringDelayCounter = 0;
-                    //Transform transform = GameObj.GetComponent<Transform>();
-                    //GameObject bullet = BulletPrefab.Res.Instantiate(transform.Pos, transform.Angle);
-                    //BulletController bulletController = bullet.GetComponent<BulletController>();
-                    //bulletController.Creator = GameObj;
-                    //Scene.Current.AddObject(bullet);
                 }
             }
 

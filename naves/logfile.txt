@@ -75,6 +75,7 @@
 [Core] Msg:   ...done!
 [Core] Msg: Assembly loaded: FarseerDuality
 [Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg:   Loading Resource 'Data\Player.Prefab.res'
 [Core] Msg:   Loading Resource 'Data\Bullet.Prefab.res'
 [Core] Msg: Loading Resource 'Data\fondo.Material.res'
 [Core] Msg:   Loading Resource 'Data\fondo.Texture.res'
@@ -82,5 +83,3 @@
 [Core] Msg: Loading Resource 'Data\ShipOne.Material.res'
 [Core] Msg:   Loading Resource 'Data\ShipOne.Texture.res'
 [Core] Msg:     Loading Resource 'Data\ShipOne.Pixmap.res'
-[Core] Msg: Assembly loaded: Microsoft.VisualStudio.Debugger.Runtime
-[Core] Msg: Assembly loaded: System.Configuration

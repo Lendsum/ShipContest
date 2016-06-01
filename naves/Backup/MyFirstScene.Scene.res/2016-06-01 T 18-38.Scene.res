@@ -197,9 +197,6 @@
             </shapes>
           </item>
           <item dataType="Struct" type="naves.SpaceBagController" id="1395198759">
-            <_x003C_PlayerPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-              <contentPath dataType="String">Data\Player.Prefab.res</contentPath>
-            </_x003C_PlayerPrefab_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">192365404</gameobj>
           </item>

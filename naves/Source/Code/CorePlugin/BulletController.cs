@@ -56,9 +56,17 @@ namespace naves
             if (rigidBodyArgs == null) return;
 
             Scene.Current.RemoveObject(GameObj);
-            Scene.Current.RemoveObject(rigidBodyArgs.CollideWith);
-        }
 
+            var playerAffected=rigidBodyArgs.CollideWith.GetComponent<Player>();
+            if (playerAffected != null)
+            {
+                playerAffected.Life -= this.Damage;
+                if (playerAffected.Life < 0f)
+                {
+                    Scene.Current.RemoveObject(rigidBodyArgs.CollideWith);
+                }
+            }
+        }
 
         public void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
