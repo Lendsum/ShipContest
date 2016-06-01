@@ -59,12 +59,14 @@
   <ItemGroup>
     <Compile Include="BulletController.cs" />
     <Compile Include="CorePlugin.cs" />
+    <Compile Include="ICommander.cs" />
     <Compile Include="NavigationSystem.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PowerSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RadarSystem.cs" />
     <Compile Include="SpaceBagController.cs" />
+    <Compile Include="ZombieCommander.cs" />
     <Compile Include="ZombieController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

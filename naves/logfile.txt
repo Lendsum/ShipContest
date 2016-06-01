@@ -75,11 +75,20 @@
 [Core] Msg:   ...done!
 [Core] Msg: Assembly loaded: FarseerDuality
 [Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
-[Core] Msg:   Loading Resource 'Data\Player.Prefab.res'
 [Core] Msg:   Loading Resource 'Data\Bullet.Prefab.res'
+[Core] Msg:   Loading Resource 'Data\Player.Prefab.res'
+[Core] Wrn:     Actual Type 'List<ZombieController>' of object value in field '<RadarTargets>k__BackingField' does not match reflected FieldType 'List<Player>'. Trying to convert...'
+[Core] Wrn:       ...failed! Discarding value 'System.Collections.Generic.List`1[naves.ZombieController]'
 [Core] Msg: Loading Resource 'Data\fondo.Material.res'
 [Core] Msg:   Loading Resource 'Data\fondo.Texture.res'
 [Core] Msg:     Loading Resource 'Data\fondo.Pixmap.res'
 [Core] Msg: Loading Resource 'Data\ShipOne.Material.res'
 [Core] Msg:   Loading Resource 'Data\ShipOne.Texture.res'
 [Core] Msg:     Loading Resource 'Data\ShipOne.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\bulletOne.Material.res'
+[Core] Msg:   Loading Resource 'Data\bulletOne.Texture.res'
+[Core] Msg:     Loading Resource 'Data\bulletOne.Pixmap.res'
+[Core] Msg: Shutting down OpenGL 2.1 (OpenTK)...
+[Core] Msg: Shutting down OpenAL (OpenTK)...
+[Core] Msg: Shutting down .Net Framework...
+[Core] Msg: DualityApp terminated

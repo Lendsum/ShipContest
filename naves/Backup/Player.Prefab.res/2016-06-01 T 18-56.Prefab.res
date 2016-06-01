@@ -7,8 +7,8 @@
       <_items dataType="Array" type="Duality.Component[]" id="2048893136" length="8">
         <item dataType="Struct" type="Duality.Components.Transform" id="413197165">
           <active dataType="Bool">true</active>
-          <angle dataType="Float">0</angle>
-          <angleAbs dataType="Float">0</angleAbs>
+          <angle dataType="Float">0.003061029</angle>
+          <angleAbs dataType="Float">0.003061029</angleAbs>
           <angleVel dataType="Float">0</angleVel>
           <angleVelAbs dataType="Float">0</angleVelAbs>
           <deriveAngle dataType="Bool">true</deriveAngle>
@@ -16,17 +16,17 @@
           <ignoreParent dataType="Bool">false</ignoreParent>
           <parentTransform />
           <pos dataType="Struct" type="Duality.Vector3">
-            <X dataType="Float">0</X>
-            <Y dataType="Float">0</Y>
+            <X dataType="Float">100.794441</X>
+            <Y dataType="Float">67.30885</Y>
             <Z dataType="Float">0</Z>
           </pos>
           <posAbs dataType="Struct" type="Duality.Vector3">
-            <X dataType="Float">0</X>
-            <Y dataType="Float">0</Y>
+            <X dataType="Float">100.794441</X>
+            <Y dataType="Float">67.30885</Y>
             <Z dataType="Float">0</Z>
           </posAbs>
-          <scale dataType="Float">1</scale>
-          <scaleAbs dataType="Float">1</scaleAbs>
+          <scale dataType="Float">0.906190157</scale>
+          <scaleAbs dataType="Float">0.906190157</scaleAbs>
           <vel dataType="Struct" type="Duality.Vector3">
             <X dataType="Float">0</X>
             <Y dataType="Float">0</Y>
@@ -136,13 +136,13 @@
                   <X dataType="Float">-2.42383814</X>
                   <Y dataType="Float">5.7515955</Y>
                 </position>
-                <radius dataType="Float">302.46933</radius>
+                <radius dataType="Float">437.929321</radius>
                 <restitution dataType="Float">0.3</restitution>
                 <sensor dataType="Bool">true</sensor>
               </item>
             </_items>
             <_size dataType="Int">3</_size>
-            <_version dataType="Int">6</_version>
+            <_version dataType="Int">3</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="naves.Player" id="1432440839">
@@ -154,7 +154,6 @@
           <_x003C_FiringDelay_x003E_k__BackingField dataType="Float">10</_x003C_FiringDelay_x003E_k__BackingField>
           <_x003C_FollowCamera_x003E_k__BackingField dataType="Bool">true</_x003C_FollowCamera_x003E_k__BackingField>
           <_x003C_KeyboardControl_x003E_k__BackingField dataType="Bool">true</_x003C_KeyboardControl_x003E_k__BackingField>
-          <_x003C_Life_x003E_k__BackingField dataType="Float">100</_x003C_Life_x003E_k__BackingField>
           <_x003C_RadarTargets_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.List`1[[naves.ZombieController]]" id="3315662179">
             <_items dataType="Array" type="naves.ZombieController[]" id="457846502" length="0" />
             <_size dataType="Int">0</_size>
@@ -315,7 +314,7 @@
               <lineAlign dataType="Enum" type="Duality.Alignment" name="Left" value="1" />
               <maxHeight dataType="Int">0</maxHeight>
               <maxWidth dataType="Int">0</maxWidth>
-              <sourceText dataType="String">Player 1</sourceText>
+              <sourceText dataType="String">hola</sourceText>
               <wrapMode dataType="Enum" type="Duality.Drawing.FormattedText+WrapMode" name="Word" value="1" />
             </text>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />

@@ -22,7 +22,7 @@ namespace naves
         public bool KeyboardControl { get; set; } = true;
         TextRenderer text;
 
-        public List<ZombieController> RadarTargets { get; set; } = new List<ZombieController>();
+        public List<Player> RadarTargets { get; set; } = new List<Player>();
 
         public float AvailablePower { get; set; } = 100f;
         public float AceleratePower { get; set; } = 0f;
@@ -32,7 +32,9 @@ namespace naves
 
         NavigationSystem navigation;
         PowerSystem power;
-        private RadarSystem radarSystem;
+        RadarSystem radarSystem;
+
+        public ICommander Commander { get; set; }
 
         public void OnInit(InitContext context)
         {
@@ -86,6 +88,13 @@ namespace naves
                     this.power.Fire(20);
                 }
             }
+            else
+            {
+                if (this.Commander!=null)
+                {
+                    this.Commander.Refresh(this.radarSystem, this.power, this.navigation);
+                }
+            }
 
             #endregion  
 
@@ -101,6 +110,11 @@ namespace naves
                 this.AceleratePower = 0f;
             }
 
+            if (this.power.RotateRight!=0f)
+            {
+                body.ApplyLocalForce(this.power.RotateRight/1000 * body.Inertia);
+            }
+            
             m_FiringDelayCounter += Time.TimeMult;
             if (this.WeaponPower > 0f)
             {
@@ -117,11 +131,20 @@ namespace naves
                 }
             }
 
-            string text = this.navigation.Position.ToString() + " - " + this.navigation.Speed.ToString() + " - " + this.navigation.Angle.ToString()
-                + " - P:" + this.power.Available + " - R:" + this.radarSystem.Enemies.Count().ToString();
+            
+            this.text.Text = new Duality.Drawing.FormattedText() { SourceText = this.GetText()};
 
-            this.text.Text = new Duality.Drawing.FormattedText() { SourceText = text };
+        }
 
+        private string GetText()
+        {
+            if (navigation != null && navigation.Position != null && this.power != null && this.radarSystem != null && this.radarSystem.Enemies!=null)
+            {
+                return  this.navigation?.Position.ToString() + " - " + this.navigation?.Speed.ToString() + " - " + this.navigation?.Angle.ToString()
+                    + " - P:" + this.power?.Available + " - R:" + this.radarSystem?.Enemies.Count().ToString();
+            }
+
+            return string.Empty;
         }
 
         public void OnCollisionBegin(Component sender, CollisionEventArgs args)
@@ -130,8 +153,9 @@ namespace naves
             var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
             if (rigidBodyArgs != null && !rigidBodyArgs.OtherShape.IsSensor)
             {
-                var otherPlayer = rigidBodyArgs.CollideWith.GetComponent<ZombieController>();
-                if (otherPlayer != null && !RadarTargets.Contains(otherPlayer))
+                var otherPlayer = rigidBodyArgs.CollideWith.GetComponent<Player>();
+
+                if (otherPlayer != null && RadarTargets!=null && !RadarTargets.Contains(otherPlayer))
                 {
                     RadarTargets.Add(otherPlayer);
                 }
@@ -143,8 +167,8 @@ namespace naves
             var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
             if (rigidBodyArgs != null && !rigidBodyArgs.OtherShape.IsSensor)
             {
-                var otherPlayer = rigidBodyArgs.CollideWith.GetComponent<ZombieController>();
-                if (otherPlayer != null && RadarTargets.Contains(otherPlayer))
+                var otherPlayer = rigidBodyArgs.CollideWith.GetComponent<Player>();
+                if (otherPlayer != null && RadarTargets != null  && RadarTargets.Contains(otherPlayer))
                 {
                     RadarTargets.Remove(otherPlayer);
                 }

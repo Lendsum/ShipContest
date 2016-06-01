@@ -19,7 +19,7 @@ namespace naves
 
         public void Acelerate(float power, bool reverse = false)
         {
-            if (player.AvailablePower > power)
+            if (player.AvailablePower >= power)
             {
                 player.AvailablePower -= power;
                 player.AceleratePower = power;
@@ -29,11 +29,26 @@ namespace naves
 
         public void Fire(float power)
         {
-            if (player.AvailablePower>power)
+            if (player.AvailablePower >= power)
             {
                 player.WeaponPower = power;
                 player.AvailablePower -= power;
             }
         }
+
+        private float rotateRight = 0f;
+        public float RotateRight
+        {
+            get
+            {
+                return this.rotateRight;
+            }
+            set
+            {
+                if (value > 10f || value < -10f) return;
+                this.rotateRight = value;
+            }
+        }
+
     }
 }

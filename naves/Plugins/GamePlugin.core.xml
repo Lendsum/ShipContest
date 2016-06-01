@@ -9,6 +9,19 @@
             Defines a Duality core plugin.
             </summary>
         </member>
+        <member name="T:naves.ICommander">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:naves.ICommander.Refresh(naves.RadarSystem,naves.PowerSystem,naves.NavigationSystem)">
+            <summary>
+            Refreshes the specified radar.
+            </summary>
+            <param name="radar">The radar.</param>
+            <param name="power">The power.</param>
+            <param name="navigation">The navigation.</param>
+        </member>
         <member name="M:naves.NavigationSystem.#ctor(Duality.GameObject)">
             <summary>
             Initializes a new instance of the <see cref="T:naves.NavigationSystem"/> class.
