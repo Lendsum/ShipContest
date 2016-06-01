@@ -74,12 +74,16 @@
 [Core] Msg:   ...done!
 [Core] Msg: Assembly loaded: FarseerDuality
 [Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg:   Loading Resource 'Data\Bullet.Prefab.res'
+[Core] Msg:   Assembly loaded: Microsoft.VisualStudio.Debugger.Runtime
+[Core] Msg:   Assembly loaded: System.Configuration
 [Core] Msg: Loading Resource 'Data\SpaceBg.Material.res'
 [Core] Msg:   Loading Resource 'Data\SpaceBg.Texture.res'
 [Core] Msg:     Loading Resource 'Data\SpaceBg.Pixmap.res'
 [Core] Msg: Loading Resource 'Data\ShipOne.Material.res'
 [Core] Msg:   Loading Resource 'Data\ShipOne.Texture.res'
 [Core] Msg:     Loading Resource 'Data\ShipOne.Pixmap.res'
-[Core] Msg: Loading Resource 'Data\bulletOne.Material.res'
-[Core] Msg:   Loading Resource 'Data\bulletOne.Texture.res'
-[Core] Msg:     Loading Resource 'Data\bulletOne.Pixmap.res'
+[Core] Msg: Shutting down OpenGL 2.1 (OpenTK)...
+[Core] Msg: Shutting down OpenAL (OpenTK)...
+[Core] Msg: Shutting down .Net Framework...
+[Core] Msg: DualityApp terminated

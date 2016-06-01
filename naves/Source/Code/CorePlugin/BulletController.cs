@@ -17,8 +17,8 @@ namespace naves
         private RigidBody m_RigidBody;
         public float Speed { get; set; } = 30f;
         private float m_LifetimeCounter;
-
         public float LifeTime { get; set; } = 100f;
+        public GameObject Creator { get; set; }
 
         public void OnInit(InitContext context)
         {
@@ -43,7 +43,19 @@ namespace naves
         }
         public void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
+            //Do not collide with whatever created the bullet
+            if (args.CollideWith == Creator) return;
+
+            //We cast to RigidBodyCollisionEventArgs to get access to the info about the shapes involved.
+            var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
+            if (rigidBodyArgs != null && rigidBodyArgs.OtherShape.IsSensor)  return;
+            if (rigidBodyArgs == null) return;
+
+            Scene.Current.RemoveObject(GameObj);
+            Scene.Current.RemoveObject(rigidBodyArgs.CollideWith);
         }
+
+    
         public void OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
         }

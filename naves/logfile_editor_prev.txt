@@ -108,46 +108,63 @@
 [Core] Msg: Loading Resource 'Data\ShipOne.Material.res'
 [Core] Msg:   Loading Resource 'Data\ShipOne.Texture.res'
 [Core] Msg:     Loading Resource 'Data\ShipOne.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\bulletOne.Pixmap.res'
 [Core] Msg: Loading Resource 'Data\bulletOne.Texture.res'
-[Core] Msg:   Loading Resource 'Data\bulletOne.Pixmap.res'
 [Core] Msg: Loading Resource 'Data\bulletOne.Material.res'
 [Core] Msg: Assembly loaded: System.IO.Compression
-[Core] ERR: OnSaving() of Scene "Data\MyFirstScene" failed: NotImplementedException: The method or operation is not implemented.
-            CallStack:
-               at naves.Player.OnShutdown(ShutdownContext context) in C:\Users\cpsae\Documents\Dualitor\Naves\naves\Source\Code\CorePlugin\Player.cs:line 24
-               at Duality.GameObject.IterateComponents[T](Action`1 forEach, Predicate`1 where) in c:\projects\duality\Duality\GameObject.cs:line 678
-               at Duality.GameObject.OnSaving(Boolean deep) in c:\projects\duality\Duality\GameObject.cs:line 933
-               at Duality.Resources.Scene.OnSaving(String saveAsPath) in c:\projects\duality\Duality\Resources\Scene.cs:line 942
-               at Duality.Resource.CheckedOnSaving(String saveAsPath) in c:\projects\duality\Duality\Resource.cs:line 215
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
 [Core] Msg: Assembly loaded: Windows7.DesktopIntegration
 [Edit] Msg: Saving data...
-[Core] ERR: OnSaving() of Scene "Data\MyFirstScene" failed: NotImplementedException: The method or operation is not implemented.
-            CallStack:
-               at naves.Player.OnShutdown(ShutdownContext context) in C:\Users\cpsae\Documents\Dualitor\Naves\naves\Source\Code\CorePlugin\Player.cs:line 24
-               at Duality.GameObject.IterateComponents[T](Action`1 forEach, Predicate`1 where) in c:\projects\duality\Duality\GameObject.cs:line 678
-               at Duality.GameObject.OnSaving(Boolean deep) in c:\projects\duality\Duality\GameObject.cs:line 933
-               at Duality.Resources.Scene.OnSaving(String saveAsPath) in c:\projects\duality\Duality\Resources\Scene.cs:line 942
-               at Duality.Resource.CheckedOnSaving(String saveAsPath) in c:\projects\duality\Duality\Resource.cs:line 215
-[Core] ERR: OnSaving() of Scene "Data\MyFirstScene" failed: NotImplementedException: The method or operation is not implemented.
-            CallStack:
-               at naves.Player.OnShutdown(ShutdownContext context) in C:\Users\cpsae\Documents\Dualitor\Naves\naves\Source\Code\CorePlugin\Player.cs:line 24
-               at Duality.GameObject.IterateComponents[T](Action`1 forEach, Predicate`1 where) in c:\projects\duality\Duality\GameObject.cs:line 678
-               at Duality.GameObject.OnSaving(Boolean deep) in c:\projects\duality\Duality\GameObject.cs:line 933
-               at Duality.Resources.Scene.OnSaving(String saveAsPath) in c:\projects\duality\Duality\Resources\Scene.cs:line 942
-               at Duality.Resource.CheckedOnSaving(String saveAsPath) in c:\projects\duality\Duality\Resource.cs:line 215
 [Edit] Msg: Reloading core plugins...
 [Edit] Msg:   Plugins\GamePlugin.core.dll...
 [Core] Msg:     Assembly loaded: GamePlugin.core
-[Edit] ERR:     An error occurred: NotImplementedException: The method or operation is not implemented.
-                CallStack:
-                   at naves.Player.OnShutdown(ShutdownContext context) in C:\Users\cpsae\Documents\Dualitor\Naves\naves\Source\Code\CorePlugin\Player.cs:line 24
-                   at Duality.GameObject.IterateComponents[T](Action`1 forEach, Predicate`1 where) in c:\projects\duality\Duality\GameObject.cs:line 678
-                   at Duality.Resources.Scene.<OnLeaving>b__0() in c:\projects\duality\Duality\Resources\Scene.cs:line 195
-                   at Duality.DualityApp.EditorGuard(Action action) in c:\projects\duality\Duality\DualityApp.cs:line 1244
 [Edit] Msg: Initializing reloaded core plugins...
 [Edit] Msg:   GamePlugin.core...
 [Edit] Msg:     Analyzing Core Plugin: GamePlugin.core
 [Edit] Msg: Restoring data...
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Edit] Msg: Saving data...
+[Edit] Msg: Reloading core plugins...
+[Edit] Msg:   Plugins\GamePlugin.core.dll...
+[Core] Msg:     Assembly loaded: GamePlugin.core
+[Edit] Msg: Initializing reloaded core plugins...
+[Edit] Msg:   GamePlugin.core...
+[Edit] Msg:     Analyzing Core Plugin: GamePlugin.core
+[Edit] Msg: Restoring data...
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Edit] Msg: Saving data...
+[Edit] Msg: Reloading core plugins...
+[Edit] Msg:   Plugins\GamePlugin.core.dll...
+[Core] Msg:     Assembly loaded: GamePlugin.core
+[Edit] Msg: Initializing reloaded core plugins...
+[Edit] Msg:   GamePlugin.core...
+[Edit] Msg:     Analyzing Core Plugin: GamePlugin.core
+[Edit] Msg: Restoring data...
+[Core] Msg: Loading Resource 'Data\Bullet.Prefab.res'
+[Edit] Msg: Saving data...
+[Edit] Msg: Reloading core plugins...
+[Edit] Msg:   Plugins\GamePlugin.core.dll...
+[Core] Msg:     Assembly loaded: GamePlugin.core
+[Edit] Msg: Initializing reloaded core plugins...
+[Edit] Msg:   GamePlugin.core...
+[Edit] Msg:     Analyzing Core Plugin: GamePlugin.core
+[Edit] Msg: Restoring data...
+[Core] Msg: Loading Resource 'Data\Bullet.Prefab.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
 [Edit] Msg: Saving user data...
 [Core] Msg: Shutting down GLControl (OpenTK)...
 [Core] Msg: Shutting down OpenGL 2.1 (OpenTK)...
