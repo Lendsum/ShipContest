@@ -48,7 +48,7 @@ namespace naves
             }
 
             CreatePlayer(new Vector3(0, 0, 0), 0, true, true, 1);
-            CreatePlayer(new Vector3(100, 100, 0), 0, false, false,2);
+            CreatePlayer(new Vector3(100, 100, 0), 0, false, false, 2);
             CreatePlayer(new Vector3(200, 200, 0), 0, false, false, 3);
             CreatePlayer(new Vector3(300, 300, 0), 0, false, false, 4);
 
@@ -86,25 +86,28 @@ namespace naves
 
         private void CreatePlayer(Vector3 pos, float angle, bool keyboard, bool cam, int number)
         {
-            var player1 = PlayerPrefab.Res.Instantiate(pos, 0);
-            var playerController = player1.GetComponent<Player>();
-            playerController.KeyboardControl = keyboard;
-            playerController.FollowCamera = cam;
-            
-            if (keyboard == false)
+            if (!this.Players.ContainsKey(number))
             {
-                playerController.Commander = new ZombieCommander();
-            }
+                var player1 = PlayerPrefab.Res.Instantiate(pos, 0);
+                var playerController = player1.GetComponent<Player>();
+                playerController.KeyboardControl = keyboard;
+                playerController.FollowCamera = cam;
 
-            this.Players.Add(number, playerController);
-            Scene.Current.AddObject(player1);
+                if (keyboard == false)
+                {
+                    playerController.Commander = new ZombieCommander();
+                }
+
+                this.Players.Add(number, playerController);
+                Scene.Current.AddObject(player1);
+            }
         }
 
         private void ActivateCamera(int player)
         {
-            for (int i=1;i<=this.Players.Count;i++)
+            for (int i = 1; i <= this.Players.Count; i++)
             {
-                if (player==i)
+                if (player == i)
                 {
                     this.Players[i].FollowCamera = true;
                 }

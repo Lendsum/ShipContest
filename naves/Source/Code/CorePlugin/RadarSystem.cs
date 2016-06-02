@@ -18,6 +18,12 @@ namespace naves
             this.player = ship?.GetComponent<Player>();
         }
 
-        public Vector2[] Enemies => player?.RadarTargets?.Select(x => x.GameObj.Transform.Pos.Xy).ToArray();
+        public RadarPoint[] Enemies => player?.RadarTargets?.Select(
+            x => new RadarPoint()
+            {
+                Life = x.Life,
+                Position = x.GameObj.Transform.Pos.Xy,
+                Vel = x.GameObj.Transform.Vel.Xy
+            }).ToArray();
     }
 }
