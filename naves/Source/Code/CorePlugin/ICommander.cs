@@ -11,6 +11,8 @@ namespace naves
     /// </summary>
     public interface ICommander
     {
+        string Name { get; }
+
         /// <summary>
         /// Refreshes the specified radar.
         /// </summary>

@@ -42,6 +42,7 @@ namespace naves
             if (context != InitContext.Activate) return;
 
             var players = Scene.Current.FindComponents<Player>();
+            this.Players = new Dictionary<int, Player>();
             foreach (var player in players.ToArray())
             {
                 Scene.Current.RemoveObject(player.GameObj);
@@ -53,7 +54,7 @@ namespace naves
             CreatePlayer(new Vector3(300, 300, 0), 0, false, false, 4);
 
 
-            players = Scene.Current.FindComponents<Player>();
+            //players = Scene.Current.FindComponents<Player>();
         }
 
         public void OnShutdown(ShutdownContext context)
@@ -95,7 +96,7 @@ namespace naves
 
                 if (keyboard == false)
                 {
-                    playerController.Commander = new ZombieCommander();
+                    playerController.Commander = new ZombieCommander() { Name = number.ToString() };
                 }
 
                 this.Players.Add(number, playerController);

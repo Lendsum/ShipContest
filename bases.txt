@@ -1,0 +1,35 @@
+Bases de las naves
+
+
+Mecanica del juego:
+-------------------
+Se harán 4 rondas de 5 minutos cada una.
+
+Solo consigues puntos si al final de cada ronda estas vivo.
+Si quedan todos vivos obtendras 1 puntos
+si quedan todos vivos menos 1, obtendras 2 puntos
+etc ...
+
+Gana quien mas puntos tenga al final de las 4 rondas. Si hay empate se divide el premio
+Para el primero son 75€
+Para el segundo son 25€
+
+Si el primero y el segundo tienen los mismos puntos, se dará 50€ a cada uno
+Si el primero tiene mas puntos que el segundo, pero el segundo y el tercero tienen los mismos puntos. El primero se lleva 50€, el segundo 25€ y el tercero 25€
+
+El premio, para evitar problemas fiscales, será canjeable por una o mas compras online. Lo puedes acumular para la siguiente competición.
+
+La posición de salida en cada ronda será interpuesta por la organización.
+
+El score que manda es el que sale impreso en pantalla durante la ejecución.
+
+
+Verificación de las naves:
+--------------------------
+
+El código solo puede obtener información del entorno a traves de los objetos pasados en la interfaz. No puede acceder a las mecanicas del engine ni alterarlas. Si se detecta algo será expulsado de la competición.
+
+No puede comunicarse con servicios de terceros tampoco.
+
+El tiempo de ejecución de la lógica tiene que ser de orden N*N con respecto a los elementos de la escena detectada, es decir,  no podrá realizar iteraciónes de ordenes superior a N*N. En todo caso, si se detecta que el código retrasa la ejecución del engine de forma no razonable (valorado por el organizador), será descalificado.
+

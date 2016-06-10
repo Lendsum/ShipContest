@@ -31,7 +31,6 @@ C:\Users\cpsae\Documents\Dualitor\ShipContest\naves\Source\Code\CorePlugin\bin\D
 C:\Users\cpsae\Documents\Dualitor\ShipContest\naves\Source\Code\CorePlugin\bin\Debug\FarseerDuality.xml
 C:\Users\cpsae\Documents\Dualitor\ShipContest\naves\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
 C:\Users\cpsae\Documents\Dualitor\ShipContest\naves\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
-C:\git\ShipContest\naves\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache
 C:\git\ShipContest\naves\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
 C:\git\ShipContest\naves\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
 C:\git\ShipContest\naves\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.dll

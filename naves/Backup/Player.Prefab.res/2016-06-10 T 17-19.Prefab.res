@@ -142,7 +142,7 @@
               </item>
             </_items>
             <_size dataType="Int">3</_size>
-            <_version dataType="Int">12</_version>
+            <_version dataType="Int">6</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="naves.Player" id="1432440839">
@@ -151,13 +151,12 @@
           <_x003C_BulletPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
             <contentPath dataType="String">Data\Bullet.Prefab.res</contentPath>
           </_x003C_BulletPrefab_x003E_k__BackingField>
-          <_x003C_Commander_x003E_k__BackingField />
           <_x003C_FiringDelay_x003E_k__BackingField dataType="Float">10</_x003C_FiringDelay_x003E_k__BackingField>
           <_x003C_FollowCamera_x003E_k__BackingField dataType="Bool">true</_x003C_FollowCamera_x003E_k__BackingField>
           <_x003C_KeyboardControl_x003E_k__BackingField dataType="Bool">true</_x003C_KeyboardControl_x003E_k__BackingField>
           <_x003C_Life_x003E_k__BackingField dataType="Float">100</_x003C_Life_x003E_k__BackingField>
-          <_x003C_RadarTargets_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.List`1[[naves.Player]]" id="3315662179">
-            <_items dataType="Array" type="naves.Player[]" id="457846502" length="0" />
+          <_x003C_RadarTargets_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.List`1[[naves.ZombieController]]" id="3315662179">
+            <_items dataType="Array" type="naves.ZombieController[]" id="457846502" length="0" />
             <_size dataType="Int">0</_size>
             <_version dataType="Int">0</_version>
           </_x003C_RadarTargets_x003E_k__BackingField>
@@ -285,7 +284,6 @@
           </navigation>
           <power dataType="Struct" type="naves.PowerSystem" id="3604261577">
             <player dataType="ObjectRef">1432440839</player>
-            <rotateRight dataType="Float">0</rotateRight>
           </power>
           <radarSystem dataType="Struct" type="naves.RadarSystem" id="3746475942">
             <player dataType="ObjectRef">1432440839</player>

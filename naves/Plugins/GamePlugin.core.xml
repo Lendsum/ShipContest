@@ -28,5 +28,13 @@
             </summary>
             <param name="ship">The ship.</param>
         </member>
+        <member name="P:naves.ZombieCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
     </members>
 </doc>

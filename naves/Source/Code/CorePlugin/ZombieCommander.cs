@@ -14,7 +14,20 @@ namespace naves
 {
     public class ZombieCommander : ICommander
     {
+        
         bool fire = false;
+
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+        public string Name
+        {
+            get;set;
+        }
+
         public void Refresh(RadarSystem radar, PowerSystem power, NavigationSystem navigation)
         {
             if (power.Available>100)
