@@ -25,12 +25,15 @@ namespace naves
         public float Damage { get; set; }
         public ScoreText ScoreText { get; private set; }
 
+        Player playerCreator;
+
         public void OnInit(InitContext context)
         {
             if (context != InitContext.Activate) return;
             m_Transform = GameObj.GetComponent<Transform>();
             m_RigidBody = GameObj.GetComponent<RigidBody>();
             this.ScoreText=GameObj.ParentScene.FindComponent<TextRenderer>().GameObj.GetComponent<ScoreText>();
+            playerCreator = Creator.GetComponent<Player>();
         }
 
         public void OnUpdate()
@@ -68,7 +71,7 @@ namespace naves
                      Scene.Current.RemoveObject(rigidBodyArgs.CollideWith);
 
                     // update score.
-                    this.ScoreText.Text = this.ScoreText.Text + " - " + playerAffected.Commander?.Name;
+                    this.ScoreText.Text = this.ScoreText.Text + " - " + playerAffected.Commander?.Name + " by " + playerCreator.Commander.Name;
                 }
             }
         }

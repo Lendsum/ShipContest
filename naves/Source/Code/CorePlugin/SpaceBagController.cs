@@ -18,13 +18,20 @@ namespace naves
         public ContentRef<Prefab> PlayerPrefab { get; set; }
         private Dictionary<int, Player> Players = new Dictionary<int, Player>();
 
+        Random random = new Random();
+
+
         public void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
             //We cast to RigidBodyCollisionEventArgs to get access to the info about the shapes involved.
             var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
             if (rigidBodyArgs != null && rigidBodyArgs.OtherShape.IsSensor) return;
             if (rigidBodyArgs == null) return;
-            args.CollideWith.Transform.Pos = new Vector3(0, 0, 0);
+
+            float x = random.Next(-50, 50);
+            float y = random.Next(-50, 50);
+
+            args.CollideWith.Transform.Pos = new Vector3(x, y, 0);
         }
 
         public void OnCollisionEnd(Component sender, CollisionEventArgs args)
@@ -48,10 +55,10 @@ namespace naves
                 Scene.Current.RemoveObject(player.GameObj);
             }
 
-            CreatePlayer(new Vector3(0, 0, 0), 0, true, true, 1);
-            CreatePlayer(new Vector3(100, 100, 0), 0, false, false, 2);
-            CreatePlayer(new Vector3(200, 200, 0), 0, false, false, 3);
-            CreatePlayer(new Vector3(300, 300, 0), 0, false, false, 4);
+            CreatePlayer(new Vector3(500, 500, 0), 0, false, false,1, new LucioCommander());
+            CreatePlayer(new Vector3(-500, -500, 0), 0, false, false, 2, new FranCommander());
+            CreatePlayer(new Vector3(500, -500, 0), 0, false, false, 3, new RikiNhOComander());
+            CreatePlayer(new Vector3(-500, 500, 0), 0, false, false, 4, new FirstCommander());
 
 
             //players = Scene.Current.FindComponents<Player>();
@@ -85,7 +92,7 @@ namespace naves
             }
         }
 
-        private void CreatePlayer(Vector3 pos, float angle, bool keyboard, bool cam, int number)
+        private void CreatePlayer(Vector3 pos, float angle, bool keyboard, bool cam, int number, ICommander commander)
         {
             if (!this.Players.ContainsKey(number))
             {
@@ -96,7 +103,7 @@ namespace naves
 
                 if (keyboard == false)
                 {
-                    playerController.Commander = new ZombieCommander() { Name = number.ToString() };
+                    playerController.Commander = commander;
                 }
 
                 this.Players.Add(number, playerController);

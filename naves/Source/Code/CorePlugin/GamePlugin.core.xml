@@ -4,6 +4,30 @@
         <name>GamePlugin.core</name>
     </assembly>
     <members>
+        <member name="P:naves.FirstCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:naves.LucioCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:naves.RikiNhOComander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
         <member name="T:naves.navesCorePlugin">
             <summary>
             Defines a Duality core plugin.

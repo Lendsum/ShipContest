@@ -58,6 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BulletController.cs" />
+    <Compile Include="commanders\Configuration.cs" />
+    <Compile Include="commanders\FinalPidController.cs" />
+    <Compile Include="commanders\FirstCommnader.cs" />
+    <Compile Include="commanders\FranCommander.cs" />
+    <Compile Include="commanders\LucioCommander.cs" />
+    <Compile Include="commanders\RikiNhOCommander.cs" />
     <Compile Include="CorePlugin.cs" />
     <Compile Include="ICommander.cs" />
     <Compile Include="NavigationSystem.cs" />

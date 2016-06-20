@@ -47,3 +47,4 @@ C:\git\ShipContest\naves\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.xml
 C:\git\ShipContest\naves\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
 C:\git\ShipContest\naves\Source\Code\CorePlugin\bin\Debug\FarseerDuality.pdb
 C:\git\ShipContest\naves\Source\Code\CorePlugin\bin\Debug\FarseerDuality.xml
+C:\git\ShipContest\naves\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache
