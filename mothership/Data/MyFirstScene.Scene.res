@@ -505,7 +505,9 @@
                 </velAbs>
               </_x003C_TransformComponent_x003E_k__BackingField>
               <active dataType="Bool">true</active>
-              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="378317278" />
+              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="378317278">
+                <order dataType="Int">1</order>
+              </Almirant>
               <gameobj dataType="ObjectRef">4282489107</gameobj>
               <Hangar dataType="Struct" type="naves.Almirants.Hangar" id="2028180852">
                 <Orders dataType="Struct" type="System.Collections.Generic.List`1[[naves.Almirants.ReleaseOrder]]" id="3222926664">
@@ -714,7 +716,9 @@
                 </velAbs>
               </_x003C_TransformComponent_x003E_k__BackingField>
               <active dataType="Bool">true</active>
-              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="3572388128" />
+              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="3572388128">
+                <order dataType="Int">1</order>
+              </Almirant>
               <gameobj dataType="ObjectRef">4280487302</gameobj>
               <Hangar dataType="Struct" type="naves.Almirants.Hangar" id="1723220659">
                 <Orders dataType="Struct" type="System.Collections.Generic.List`1[[naves.Almirants.ReleaseOrder]]" id="858349988">
@@ -1105,9 +1109,19 @@
                 <Z dataType="Float">0</Z>
               </val>
             </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="885768064">
+                <_items dataType="Array" type="System.Int32[]" id="4104786036"></_items>
+                <_size dataType="Int">0</_size>
+                <_version dataType="Int">1</_version>
+              </childIndex>
+              <componentType dataType="ObjectRef">1594330614</componentType>
+              <prop dataType="MemberInfo" id="1572711302" value="P:Duality.Components.Transform:RelativeAngle" />
+              <val dataType="Float">0.0174532924</val>
+            </item>
           </_items>
-          <_size dataType="Int">2</_size>
-          <_version dataType="Int">142</_version>
+          <_size dataType="Int">3</_size>
+          <_version dataType="Int">147</_version>
         </changes>
         <obj dataType="ObjectRef">2970413352</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">

@@ -9,6 +9,11 @@
             1-North, 2-East, 3-South,4-West
             </summary>
         </member>
+        <member name="P:naves.Almirants.ReleaseOrder.ShipCommander">
+            <summary>
+            Set your ship commander before launch
+            </summary>
+        </member>
         <member name="P:naves.FirstCommander.Name">
             <summary>
             Gets or sets the name.

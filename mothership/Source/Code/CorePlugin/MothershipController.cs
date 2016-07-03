@@ -93,15 +93,15 @@ namespace naves
                             break;
                         case 2:
                             shipPos = new Vector2(this.TransformComponent.Pos.X + desviation, this.TransformComponent.Pos.Y);
-                            angle = 0.5F;
+                            angle = (float)Math.PI * 0.5F;
                             break;
                         case 3:
                             shipPos = new Vector2(this.TransformComponent.Pos.X, this.TransformComponent.Pos.Y + desviation);
-                            angle = 1;
+                            angle = (float)Math.PI * 1F;
                             break;
                         case 4:
                             shipPos = new Vector2(this.TransformComponent.Pos.X - desviation, this.TransformComponent.Pos.Y);
-                            angle = 1.5F;
+                            angle = (float)Math.PI * 1.5F;
                             break;
                         default:
                             shipPos = new Vector2(this.TransformComponent.Pos.X, this.TransformComponent.Pos.Y - desviation);
