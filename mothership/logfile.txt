@@ -1,0 +1,91 @@
+[Core] Msg: Running DualityLauncher with flags: Debugging
+[Core] Msg: Using 'DefaultPluginLoader' to load plugins.
+[Core] Msg: Scanning for core plugins...
+[Core] Msg:   Plugins\Compatibility.core.dll...
+[Core] Msg:     Assembly loaded: Compatibility.core
+[Core] Msg:     Assembly loaded: System.Linq.Expressions
+[Core] Msg:     Assembly loaded: Anonymously Hosted DynamicMethods Assembly
+[Core] Msg:   Plugins\DefaultOpenTKBackend.core.dll...
+[Core] Msg:     Assembly loaded: DefaultOpenTKBackend.core
+[Core] Msg:     Assembly loaded: OpenTK
+[Core] Msg:   Plugins\DotNetFrameworkBackend.core.dll...
+[Core] Msg:     Assembly loaded: DotNetFrameworkBackend.core
+[Core] Msg:   Plugins\GamePlugin.core.dll...
+[Core] Msg:     Assembly loaded: GamePlugin.core
+[Core] Msg: Loading auxiliary libraries...
+[Core] Msg: Initializing ISystemBackend...
+[Core] Msg:   .Net Framework...
+[Core] Msg:     Operating System: Microsoft Windows NT 6.2.9200.0 (Windows 8)
+                64 Bit Process: True
+                CLR Version: 4.0.30319.42000
+                Processor Count: 4
+[Core] Msg: Assembly loaded: System.Threading
+[Core] Msg: Assembly loaded: System.Xml.ReaderWriter
+[Core] Msg: Assembly loaded: System.Xml
+[Core] Msg: Assembly loaded: System.Xml.XDocument
+[Core] Msg: Assembly loaded: System.Xml.Linq
+[Core] Msg: Assembly loaded: System.Text.Encoding
+[Core] Msg: Assembly loaded: System.Text.RegularExpressions
+[Core] Msg: Assembly loaded: System.Reflection.Extensions
+[Core] Msg: Initializing IGraphicsBackend...
+[Core] Msg:   OpenGL 2.1 (OpenTK)...
+[Core] Msg:     Initializing OpenTK...
+[Core] Msg:       Backend: PreferNative
+                  EnableHighResolution: True
+[Core] Msg: Initializing IAudioBackend...
+[Core] Msg:   OpenAL (OpenTK)...
+[Core] Msg:     OpenAL Drivers not found. Using 64 Bit software fallback.
+[Core] Msg:     Available devices:
+                Headphones (High Definition Audio Device) (Default)
+[Core] Msg:     Current device: OpenAL Soft
+[Core] Msg:     OpenAL Version: 1.1 ALSOFT 1.15.1
+                Vendor: OpenAL Community
+                Renderer: OpenAL Soft
+                Effects: True
+[Core] Msg:     256 sources available
+[Core] Msg: Initializing core plugins...
+[Core] Msg:   Compatibility.core...
+[Core] Msg:   DefaultOpenTKBackend.core...
+[Core] Msg:     Assembly loaded: System.Drawing
+[Core] Msg:   DotNetFrameworkBackend.core...
+[Core] Msg:   GamePlugin.core...
+[Core] Msg: DualityApp initialized
+            Debug Mode: True
+            Command line arguments: 
+[Core] Msg: Opening Window...
+[Core] Msg:   Window Specification: 
+              Buffers: 2
+              Samples: 16
+              ColorFormat: 32 (8888)
+              AccumulatorFormat: 64 (16161616)
+              Depth: 24
+              Stencil: 0
+              VSync: Off
+              SwapInterval: 0
+[Core] Msg:   OpenGL Version: 4.5.0 NVIDIA 361.43
+              Vendor: NVIDIA Corporation
+              Renderer: GeForce GTX 770/PCIe/SSE2
+              Shading Language Version: 4.50 NVIDIA
+[Core] Msg: Initializing default content...
+[Core] Msg:   Assembly loaded: System.Runtime.InteropServices
+[Core] Msg:   Assembly loaded: System.Collections.Concurrent
+[Core] Msg:   Assembly loaded: System.Threading.Tasks.Parallel
+[Core] Msg:   Assembly loaded: NVorbis
+[Core] Msg:   ...done!
+[Core] Msg: Assembly loaded: FarseerDuality
+[Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
+[Core] Msg:   Loading Resource 'Data\Bullet.Prefab.res'
+[Core] Msg:   Loading Resource 'Data\Player.Prefab.res'
+[Core] Msg: Loading Resource 'Data\fondo.Material.res'
+[Core] Msg:   Loading Resource 'Data\fondo.Texture.res'
+[Core] Msg:     Loading Resource 'Data\fondo.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\ShipOne.Material.res'
+[Core] Msg:   Loading Resource 'Data\ShipOne.Texture.res'
+[Core] Msg:     Loading Resource 'Data\ShipOne.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\mothership.Material.res'
+[Core] Msg:   Loading Resource 'Data\mothership.Texture.res'
+[Core] Msg:     Loading Resource 'Data\mothership.Pixmap.res'
+[Core] Msg: Shutting down OpenGL 2.1 (OpenTK)...
+[Core] Msg: Shutting down OpenAL (OpenTK)...
+[Core] Msg: Shutting down .Net Framework...
+[Core] Msg: DualityApp terminated
