@@ -20,6 +20,14 @@
             The name.
             </value>
         </member>
+        <member name="P:naves.PabloCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
         <member name="P:naves.RikiNhOComander.Name">
             <summary>
             Gets or sets the name.
