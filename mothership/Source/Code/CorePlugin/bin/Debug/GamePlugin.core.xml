@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GamePlugin.core</name>
+    </assembly>
+    <members>
+        <member name="P:naves.Almirants.ReleaseOrder.Position">
+            <summary>
+            1-North, 2-East, 3-South,4-West
+            </summary>
+        </member>
+        <member name="P:naves.Almirants.ReleaseOrder.ShipCommander">
+            <summary>
+            Set your ship commander before launch
+            </summary>
+        </member>
+        <member name="P:naves.FirstCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:naves.LucioCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:naves.RikiNhOComander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="T:naves.navesCorePlugin">
+            <summary>
+            Defines a Duality core plugin.
+            </summary>
+        </member>
+        <member name="T:naves.ICommander">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:naves.ICommander.Refresh(naves.RadarSystem,naves.PowerSystem,naves.NavigationSystem)">
+            <summary>
+            Refreshes the specified radar.
+            </summary>
+            <param name="radar">The radar.</param>
+            <param name="power">The power.</param>
+            <param name="navigation">The navigation.</param>
+        </member>
+        <member name="M:naves.NavigationSystem.#ctor(Duality.GameObject)">
+            <summary>
+            Initializes a new instance of the <see cref="T:naves.NavigationSystem"/> class.
+            </summary>
+            <param name="ship">The ship.</param>
+        </member>
+        <member name="P:naves.RadarPoint.ShipClass">
+            <summary>
+            0- attack ship, 1-mothership
+            </summary>
+        </member>
+        <member name="P:naves.ZombieCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+    </members>
+</doc>
