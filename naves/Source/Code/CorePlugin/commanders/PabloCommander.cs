@@ -9,26 +9,21 @@ namespace naves
     {
         private FinalPidController turnPidController;
 
-        private const float PROPORTIONAL_GAIN = 110f;
-        private const float INTEGRAL_GAIN = 0.001f;
-        private const float DERIVATIVE_GAIN = 20f;
-        //private const float PROPORTIONAL_GAIN = 100f;
-        //private const float INTEGRAL_GAIN = 0.005f;
-        //private const float DERIVATIVE_GAIN = 20f;
-        private PIDConfiguration Configuration1 = new PIDConfiguration(200f, 0.001f, 25f);
-        private PIDConfiguration Configuration2 = new PIDConfiguration(10f, 0.005f, 20f);
+        private PIDConfiguration Configuration1 = new PIDConfiguration(200f, 0.001f, 25f); //...Minimized
+        private PIDConfiguration Configuration2 = new PIDConfiguration(170f, 0.001f, 6.35f); //...Maximized
 
         private float pi = (float)Math.PI;
         private bool onInit = true;
 
         float targetAngle;
         RadarPoint targetPosition;
+        DateTime start;
 
         Vector2 verticalDirection = new Vector2 { X = 0, Y = -1 };
 
         public PabloCommander()
         {
-            turnPidController = new FinalPidController(Configuration1, 1);
+            turnPidController = new FinalPidController(Configuration2, 1);
         }
 
         /// <summary>
@@ -39,7 +34,8 @@ namespace naves
         /// </value>
         public string Name
         {
-            get { return "Pablo"; } set { }
+            get { return "Pablo"; }
+            set { }
         }
 
         public void Refresh(RadarSystem radar, PowerSystem power, NavigationSystem navigation)
@@ -59,7 +55,7 @@ namespace naves
 
         private bool AimingObjective(float targetAngle, float currentAngle, float output)
         {
-            return Math.Abs(targetAngle - currentAngle) < pi/120;
+            return Math.Abs(targetAngle - currentAngle) < pi / 90;
         }
 
         private bool OutputNearZero(float targetAngle, float currentAngle, float output)
@@ -76,6 +72,7 @@ namespace naves
             {
                 power.Acelerate(50);
                 onInit = false;
+                start = DateTime.Now;
             }
             if (radar.Enemies.Any() && !radar.Enemies.All(x => x.Position.X == 0 && x.Position.Y == 0) && radar.Enemies.Any(x => x.Position.X != 0 && x.Position.Y != 0 && Math.Abs(x.Position.X - currentPosition.X) < 400 && Math.Abs(x.Position.Y - currentPosition.Y) < 400))
             {
@@ -92,6 +89,27 @@ namespace naves
                 if (AimingObjective(targetAngle, currentAngle, turnOutput) && power.Available > 5)
                 {
                     power.Fire(power.Available >= target.Life ? target.Life + 1 : power.Available);
+                }
+            }
+            else if ((DateTime.Now - start).Minutes > 4)
+            {
+                targetPosition = new RadarPoint
+                {
+                    Position = new Vector2 { X = 10, Y = 10 },
+                    Vel = new Vector2(0)
+                };
+
+                targetAngle = GetTargetAngle(targetPosition, currentPosition, currentAngle);
+
+                turnPidController.AddSample(targetAngle - currentAngle);
+
+                var turnOutput = (float)turnPidController.GetLastOutput();
+
+                power.RotateRight = turnOutput > 10f ? 10f : turnOutput < -10f ? -10f : turnOutput;
+
+                if (OutputNearZero(targetAngle, currentAngle, turnOutput) && navigation.Speed.Length < 2)
+                {
+                    power.Acelerate(power.Available > 5 ? 5 : power.Available);
                 }
             }
             else if (Math.Abs(currentPosition.X) > 800 || Math.Abs(currentPosition.Y) > 800)
@@ -119,7 +137,7 @@ namespace naves
             {
                 targetPosition = targetPosition ?? new RadarPoint
                 {
-                    Position = new Vector2 { X = 700, Y = 900 },
+                    Position = new Vector2 { X = currentPosition.X < 0 ? -800 : 800, Y = currentPosition.Y < 0 ? -800 : 800 },
                     Vel = new Vector2(0)
                 };
 
@@ -156,7 +174,7 @@ namespace naves
         private float GetTargetAngle(RadarPoint target, Vector2 currentPosition, float currentAngle)
         {
             var targetVelocity = target.Vel;
-            var directionVector = target.Position + targetVelocity*targetVelocity.Length - currentPosition;
+            var directionVector = target.Position + targetVelocity * targetVelocity.Length - currentPosition;
 
             targetAngle = Vector2.AngleBetween(directionVector, verticalDirection);
             if (target.Position.X < currentPosition.X) targetAngle *= -1;

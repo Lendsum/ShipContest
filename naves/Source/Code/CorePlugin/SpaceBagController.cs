@@ -55,10 +55,10 @@ namespace naves
                 Scene.Current.RemoveObject(player.GameObj);
             }
 
-            CreatePlayer(new Vector3(500, 500, 0), 0, false, false,1, new LucioCommander());
-            CreatePlayer(new Vector3(-500, -500, 0), 0, false, false, 2, new FranCommander());
-            CreatePlayer(new Vector3(500, -500, 0), 0, false, false, 3, new RikiNhOComander());
-            CreatePlayer(new Vector3(-500, 500, 0), 0, false, false, 4, new PabloCommander());
+            CreatePlayer(new Vector3(-500, -500, 0), 0, false, false,1, new LucioCommander());
+            CreatePlayer(new Vector3(500, -500, 0), 0, false, false, 2, new FranCommander());
+            CreatePlayer(new Vector3(-500, 500, 0), 0, false, false, 3, new RikiNhO2Comander());
+            CreatePlayer(new Vector3(500, 500, 0), 0, false, false, 4, new PabloCommander());
 
 
             //players = Scene.Current.FindComponents<Player>();
