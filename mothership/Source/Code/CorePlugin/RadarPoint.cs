@@ -12,10 +12,7 @@ namespace naves
         public Vector2 Position { get; set; }
         public Vector2 Vel { get; set; }
         public float Life { get; set; }
-
-        /// <summary>
-        /// 0- attack ship, 1-mothership
-        /// </summary>
-        public int ShipClass { get; set; }
+        public int Id { get; set; }
+        public ShipTypeEnum Type { get; set; }
     }
 }

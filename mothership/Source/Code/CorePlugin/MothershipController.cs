@@ -13,47 +13,29 @@ using naves.Almirants;
 namespace naves
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform)), RequiredComponent(typeof(TextRenderer))]
-    public class MothershipController : Component, ICmpUpdatable, ICmpInitializable, ICmpCollisionListener
+    public class MothershipController : ShipController, ICmpUpdatable, ICmpInitializable, ICmpCollisionListener
     {
         public ContentRef<Prefab> ShipPrefab { get; set; }
         TextRenderer Text;
 
-        public Transform TransformComponent { get; private set; }
-        public float Life = 500;
-
         public List<Player> ShipsReleased { get; private set; }
-        public IAlmirant Almirant = new AlmirantZombie1();
+
+
+        public IAlmirant Almirant;
         public RadarSystem Radar;
         public Hangar Hangar;
-
-        public void OnCollisionBegin(Component sender, CollisionEventArgs args)
-        {
-
-        }
-
-        public void OnCollisionEnd(Component sender, CollisionEventArgs args)
-        {
-
-        }
-
-        public void OnCollisionSolve(Component sender, CollisionEventArgs args)
-        {
-
-        }
+        public int ArmyFaction { get; set; }
 
         public void OnInit(InitContext context)
         {
             if (context != InitContext.Activate) return;
-            this.TransformComponent = this.GameObj.GetComponent<Transform>();
-            this.Text= this.GameObj.GetComponent<TextRenderer>();
+            base.Init(this.GameObj.GetComponent<Transform>(), 5000, ShipTypeEnum.MotherShip, this.ArmyFaction);
+
+            this.Text = this.GameObj.GetComponent<TextRenderer>();
             this.ShipsReleased = new List<Player>();
-            this.Radar = new RadarSystem(this.GameObj);
+
+            this.Radar = new RadarSystem(this);
             this.Hangar = new Hangar();
-        }
-
-        public void OnShutdown(ShutdownContext context)
-        {
-
         }
 
         public void OnUpdate()
@@ -70,7 +52,6 @@ namespace naves
 
         public void GoReleaseShipOrders()
         {
-
             foreach (var order in this.Hangar.Orders)
             {
                 // if you try to release a ship without be ready, it harms you.
@@ -111,6 +92,7 @@ namespace naves
                     GameObject ship = ShipPrefab.Res.Instantiate(new Vector3(shipPos, 0), angle);
                     Player newPlayer = ship.GetComponent<Player>();
                     newPlayer.Commander = order.ShipCommander;
+                    newPlayer.MotherShip = this;
 
                     this.ShipsReleased.Add(newPlayer);
                     Scene.Current.AddObject(ship);

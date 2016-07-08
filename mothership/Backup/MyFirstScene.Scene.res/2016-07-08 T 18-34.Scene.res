@@ -314,22 +314,11 @@
             </camera>
             <gameobj dataType="ObjectRef">192365404</gameobj>
             <mother1 dataType="Struct" type="naves.MothershipController" id="3339513149">
-              <_x003C_ArmyFaction_x003E_k__BackingField dataType="Int">2</_x003C_ArmyFaction_x003E_k__BackingField>
-              <_x003C_Faction_x003E_k__BackingField dataType="Int">0</_x003C_Faction_x003E_k__BackingField>
-              <_x003C_Id_x003E_k__BackingField dataType="Int">2</_x003C_Id_x003E_k__BackingField>
-              <_x003C_Life_x003E_k__BackingField dataType="Float">5000</_x003C_Life_x003E_k__BackingField>
               <_x003C_ShipPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
                 <contentPath dataType="String">Data\Player.Prefab.res</contentPath>
               </_x003C_ShipPrefab_x003E_k__BackingField>
-              <_x003C_ShipsInRadar_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Int32],[naves.ShipController]]" id="3610457480" surrogate="true">
-                <header />
-                <body>
-                  <keys dataType="Array" type="System.Object[]" id="2127178092" length="0" />
-                  <values dataType="Array" type="System.Object[]" id="3640432694" length="0" />
-                </body>
-              </_x003C_ShipsInRadar_x003E_k__BackingField>
-              <_x003C_ShipsReleased_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.List`1[[naves.Player]]" id="378317278">
-                <_items dataType="Array" type="naves.Player[]" id="1192209482" length="0" />
+              <_x003C_ShipsReleased_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.List`1[[naves.Player]]" id="3610457480">
+                <_items dataType="Array" type="naves.Player[]" id="2127178092" length="0" />
                 <_size dataType="Int">0</_size>
                 <_version dataType="Int">0</_version>
               </_x003C_ShipsReleased_x003E_k__BackingField>
@@ -515,42 +504,32 @@
                   <Z dataType="Float">0</Z>
                 </velAbs>
               </_x003C_TransformComponent_x003E_k__BackingField>
-              <_x003C_Type_x003E_k__BackingField dataType="Enum" type="naves.ShipTypeEnum" name="MotherShip" value="2" />
               <active dataType="Bool">true</active>
-              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="2028180852">
+              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="378317278">
                 <order dataType="Int">1</order>
               </Almirant>
               <gameobj dataType="ObjectRef">4282489107</gameobj>
-              <Hangar dataType="Struct" type="naves.Almirants.Hangar" id="2466631458">
-                <Orders dataType="Struct" type="System.Collections.Generic.List`1[[naves.Almirants.ReleaseOrder]]" id="1072676750">
-                  <_items dataType="Array" type="naves.Almirants.ReleaseOrder[]" id="2842862800" length="0" />
+              <Hangar dataType="Struct" type="naves.Almirants.Hangar" id="2028180852">
+                <Orders dataType="Struct" type="System.Collections.Generic.List`1[[naves.Almirants.ReleaseOrder]]" id="3222926664">
+                  <_items dataType="Array" type="naves.Almirants.ReleaseOrder[]" id="3668801644" length="0" />
                   <_size dataType="Int">0</_size>
                   <_version dataType="Int">0</_version>
                 </Orders>
                 <shipsReady dataType="Float">0</shipsReady>
               </Hangar>
-              <Radar dataType="Struct" type="naves.RadarSystem" id="2183782208">
-                <ownerShip dataType="ObjectRef">3339513149</ownerShip>
+              <Life dataType="Float">500</Life>
+              <Radar dataType="Struct" type="naves.RadarSystem" id="2466631458">
+                <player />
+                <ship dataType="ObjectRef">4282489107</ship>
               </Radar>
               <Text dataType="ObjectRef">1730150633</Text>
             </mother1>
             <mother2 dataType="Struct" type="naves.MothershipController" id="3337511344">
-              <_x003C_ArmyFaction_x003E_k__BackingField dataType="Int">1</_x003C_ArmyFaction_x003E_k__BackingField>
-              <_x003C_Faction_x003E_k__BackingField dataType="Int">0</_x003C_Faction_x003E_k__BackingField>
-              <_x003C_Id_x003E_k__BackingField dataType="Int">3</_x003C_Id_x003E_k__BackingField>
-              <_x003C_Life_x003E_k__BackingField dataType="Float">5000</_x003C_Life_x003E_k__BackingField>
               <_x003C_ShipPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
                 <contentPath dataType="String">Data\Player.Prefab.res</contentPath>
               </_x003C_ShipPrefab_x003E_k__BackingField>
-              <_x003C_ShipsInRadar_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Int32],[naves.ShipController]]" id="3550224673" surrogate="true">
-                <header />
-                <body>
-                  <keys dataType="Array" type="System.Object[]" id="1227777646" length="0" />
-                  <values dataType="Array" type="System.Object[]" id="2744586186" length="0" />
-                </body>
-              </_x003C_ShipsInRadar_x003E_k__BackingField>
-              <_x003C_ShipsReleased_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.List`1[[naves.Player]]" id="3572388128">
-                <_items dataType="ObjectRef">1192209482</_items>
+              <_x003C_ShipsReleased_x003E_k__BackingField dataType="Struct" type="System.Collections.Generic.List`1[[naves.Player]]" id="3550224673">
+                <_items dataType="ObjectRef">2127178092</_items>
                 <_size dataType="Int">0</_size>
                 <_version dataType="Int">0</_version>
               </_x003C_ShipsReleased_x003E_k__BackingField>
@@ -736,22 +715,23 @@
                   <Z dataType="Float">0</Z>
                 </velAbs>
               </_x003C_TransformComponent_x003E_k__BackingField>
-              <_x003C_Type_x003E_k__BackingField dataType="Enum" type="naves.ShipTypeEnum" name="MotherShip" value="2" />
               <active dataType="Bool">true</active>
-              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="1723220659">
+              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="3572388128">
                 <order dataType="Int">1</order>
               </Almirant>
               <gameobj dataType="ObjectRef">4280487302</gameobj>
-              <Hangar dataType="Struct" type="naves.Almirants.Hangar" id="1817625590">
-                <Orders dataType="Struct" type="System.Collections.Generic.List`1[[naves.Almirants.ReleaseOrder]]" id="38456957">
-                  <_items dataType="ObjectRef">2842862800</_items>
+              <Hangar dataType="Struct" type="naves.Almirants.Hangar" id="1723220659">
+                <Orders dataType="Struct" type="System.Collections.Generic.List`1[[naves.Almirants.ReleaseOrder]]" id="858349988">
+                  <_items dataType="ObjectRef">3668801644</_items>
                   <_size dataType="Int">0</_size>
                   <_version dataType="Int">0</_version>
                 </Orders>
                 <shipsReady dataType="Float">0</shipsReady>
               </Hangar>
-              <Radar dataType="Struct" type="naves.RadarSystem" id="4041954325">
-                <ownerShip dataType="ObjectRef">3337511344</ownerShip>
+              <Life dataType="Float">500</Life>
+              <Radar dataType="Struct" type="naves.RadarSystem" id="1817625590">
+                <player />
+                <ship dataType="ObjectRef">4280487302</ship>
               </Radar>
               <Text dataType="ObjectRef">1728148828</Text>
             </mother2>

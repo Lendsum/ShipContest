@@ -62,11 +62,6 @@
             </summary>
             <param name="ship">The ship.</param>
         </member>
-        <member name="P:naves.RadarPoint.ShipClass">
-            <summary>
-            0- attack ship, 1-mothership
-            </summary>
-        </member>
         <member name="P:naves.ZombieCommander.Name">
             <summary>
             Gets or sets the name.

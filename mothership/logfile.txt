@@ -77,6 +77,8 @@
 [Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
 [Core] Msg:   Loading Resource 'Data\Bullet.Prefab.res'
 [Core] Msg:   Loading Resource 'Data\Player.Prefab.res'
+[Core] Msg: Assembly loaded: Microsoft.VisualStudio.Debugger.Runtime
+[Core] Msg: Assembly loaded: System.Configuration
 [Core] Msg: Loading Resource 'Data\fondo.Material.res'
 [Core] Msg:   Loading Resource 'Data\fondo.Texture.res'
 [Core] Msg:     Loading Resource 'Data\fondo.Pixmap.res'
@@ -86,7 +88,21 @@
 [Core] Msg: Loading Resource 'Data\mothership.Material.res'
 [Core] Msg:   Loading Resource 'Data\mothership.Texture.res'
 [Core] Msg:     Loading Resource 'Data\mothership.Pixmap.res'
-[Core] Msg: Shutting down OpenGL 2.1 (OpenTK)...
-[Core] Msg: Shutting down OpenAL (OpenTK)...
-[Core] Msg: Shutting down .Net Framework...
-[Core] Msg: DualityApp terminated
+[Core] ERR: NotImplementedException: The method or operation is not implemented.
+            CallStack:
+               at naves.ShipController.OnCollisionSolve(Component sender, CollisionEventArgs args) in C:\git\ShipContest\mothership\Source\Code\CorePlugin\ShipController.cs:line 73
+               at Duality.GameObject.IterateComponents[T](Action`1 forEach, Predicate`1 where) in c:\projects\duality\Duality\GameObject.cs:line 678
+               at Duality.Components.Physics.RigidBody.ProcessSingleCollisionEvent(ColEvent colEvent) in c:\projects\duality\Duality\Components\Physics\RigidBody.cs:line 1030
+               at Duality.Components.Physics.RigidBody.ProcessCollisionEvents() in c:\projects\duality\Duality\Components\Physics\RigidBody.cs:line 1001
+               at Duality.Components.Physics.RigidBody.Duality.ICmpUpdatable.OnUpdate() in c:\projects\duality\Duality\Components\Physics\RigidBody.cs:line 1091
+               at Duality.Resources.Scene.UpdateComponents[T](Action`1 updateAction) in c:\projects\duality\Duality\Resources\Scene.cs:line 545
+               at Duality.Resources.Scene.<Update>b__9() in c:\projects\duality\Duality\Resources\Scene.cs:line 467
+               at Duality.DualityApp.EditorGuard(Action action) in c:\projects\duality\Duality\DualityApp.cs:line 1255
+               at Duality.Resources.Scene.Update() in c:\projects\duality\Duality\Resources\Scene.cs:line 469
+               at Duality.DualityApp.Update() in c:\projects\duality\Duality\DualityApp.cs:line 487
+               at Duality.Backend.DefaultOpenTK.NativeWindow.OnUpdateFrame(FrameEventArgs e) in c:\projects\duality\Backend\DefaultOpenTK\Backend\Graphics\NativeWindow.cs:line 232
+               at OpenTK.GameWindow.RaiseUpdateFrame(Double elapsed, Double& timestamp) in c:\Stuff\svn\Projects\AdamsLair.OpenTK\Source\OpenTK\GameWindow.cs:line 506
+               at OpenTK.GameWindow.DispatchUpdateAndRenderFrame(Object sender, EventArgs e) in c:\Stuff\svn\Projects\AdamsLair.OpenTK\Source\OpenTK\GameWindow.cs:line 469
+               at OpenTK.GameWindow.Run(Double updates_per_second, Double frames_per_second) in c:\Stuff\svn\Projects\AdamsLair.OpenTK\Source\OpenTK\GameWindow.cs:line 431
+               at Duality.Backend.DefaultOpenTK.NativeWindow.Duality.Backend.INativeWindow.Run() in c:\projects\duality\Backend\DefaultOpenTK\Backend\Graphics\NativeWindow.cs:line 142
+               at Duality.Launcher.Program.Main(String[] args) in c:\projects\duality\DualityLauncher\Program.cs:line 76

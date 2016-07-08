@@ -12,27 +12,26 @@ using Duality.Components.Renderers;
 namespace naves
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform)), RequiredComponent(typeof(TextRenderer))]
-    public class Player : Component, ICmpUpdatable, ICmpInitializable, ICmpCollisionListener
+    public class Player : ShipController, ICmpUpdatable, ICmpInitializable, ICmpCollisionListener
     {
         public ContentRef<Prefab> BulletPrefab { get; set; }
+        
         private float m_FiringDelayCounter;
         public float FiringDelay { get; set; } = 10f;
         public bool KeyboardControl { get; set; } = true;
         public TextRenderer text;
-
-        public List<Player> RadarTargets { get; set; } = new List<Player>();
-
+        
         public float AvailablePower { get; set; } = 100f;
         public float AceleratePower { get; set; } = 0f;
         public float WeaponPower { get; set; } = 0f;
-
-        public float Life { get; set; } = 100f;
-
+        
         NavigationSystem navigation;
         PowerSystem power;
         RadarSystem radarSystem;
 
         public ICommander Commander { get; set; }
+        public MothershipController MotherShip { get; set; }
+        public int ArmyFaction { get; set; }
 
         public void OnInit(InitContext context)
         {
@@ -40,11 +39,8 @@ namespace naves
             text = this.GameObj.GetComponent<TextRenderer>();
             this.navigation = new NavigationSystem(this.GameObj);
             this.power = new PowerSystem(this);
-            this.radarSystem = new RadarSystem(this.GameObj);
-        }
-
-        public void OnShutdown(ShutdownContext context)
-        {
+            this.radarSystem = new RadarSystem(this);
+            this.Init(this.GameObj.GetComponent<Transform>(), 100, ShipTypeEnum.AttackShip, this.ArmyFaction) ;
         }
 
         public void OnUpdate()
@@ -136,39 +132,6 @@ namespace naves
             }
 
             return string.Empty;
-        }
-
-        public void OnCollisionBegin(Component sender, CollisionEventArgs args)
-        {
-            //We cast to RigidBodyCollisionEventArgs to get access to the info about the shapes involved.
-            var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
-            if (rigidBodyArgs != null && !rigidBodyArgs.OtherShape.IsSensor)
-            {
-                var otherPlayer = rigidBodyArgs.CollideWith.GetComponent<Player>();
-
-                if (otherPlayer != null && RadarTargets!=null && !RadarTargets.Contains(otherPlayer))
-                {
-                    RadarTargets.Add(otherPlayer);
-                }
-            }
-        }
-
-        public void OnCollisionEnd(Component sender, CollisionEventArgs args)
-        {
-            var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
-            if (rigidBodyArgs != null && !rigidBodyArgs.OtherShape.IsSensor)
-            {
-                var otherPlayer = rigidBodyArgs.CollideWith.GetComponent<Player>();
-                if (otherPlayer != null && RadarTargets != null  && RadarTargets.Contains(otherPlayer))
-                {
-                    RadarTargets.Remove(otherPlayer);
-                }
-            }
-        }
-
-        public void OnCollisionSolve(Component sender, CollisionEventArgs args)
-        {
-
         }
     }
 }

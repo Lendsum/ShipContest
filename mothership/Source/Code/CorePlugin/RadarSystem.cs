@@ -9,21 +9,21 @@ namespace naves
 {
     public class RadarSystem
     {
-        private Player player;
-        private GameObject ship;
+        private ShipController ownerShip;
 
-        public RadarSystem(GameObject ship)
+        public RadarSystem(ShipController ownerShip)
         {
-            this.ship = ship;
-            this.player = ship?.GetComponent<Player>();
+            this.ownerShip = ownerShip;
         }
 
-        public RadarPoint[] Enemies => player?.RadarTargets?.Select(
+        public RadarPoint[] Enemies => ownerShip?.ShipsInRadar.Values.Select(
             x => new RadarPoint()
             {
                 Life = x.Life,
-                Position = x.GameObj.Transform.Pos.Xy,
-                Vel = x.GameObj.Transform.Vel.Xy
+                Position = x.Position,
+                Vel = x.Vel,
+                Id=x.Id,
+                Type=x.Type
             }).ToArray();
     }
 }

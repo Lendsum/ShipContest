@@ -70,7 +70,9 @@
     <Compile Include="commanders\LucioCommander.cs" />
     <Compile Include="commanders\RikiNhOCommander.cs" />
     <Compile Include="CorePlugin.cs" />
+    <Compile Include="Counter.cs" />
     <Compile Include="ICommander.cs" />
+    <Compile Include="ShipController.cs" />
     <Compile Include="MothershipController.cs" />
     <Compile Include="NavigationSystem.cs" />
     <Compile Include="Player.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="RadarPoint.cs" />
     <Compile Include="RadarSystem.cs" />
     <Compile Include="ScoreText.cs" />
+    <Compile Include="ShipTypeEnum.cs" />
     <Compile Include="SpaceBagController.cs" />
     <Compile Include="ZombieCommander.cs" />
     <Compile Include="ZombieController.cs" />
