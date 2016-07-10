@@ -127,8 +127,7 @@ namespace naves
         {
             if (navigation != null && navigation.Position != null && this.power != null && this.radarSystem != null && this.radarSystem.Enemies!=null)
             {
-                return  this.navigation?.Position.ToString() + " - " + this.navigation?.Speed.ToString() + " - " + this.navigation?.Angle.ToString()
-                    + " - P:" + this.power?.Available + " - R:" + this.radarSystem?.Enemies.Count().ToString();
+                return " - P:" + this.power?.Available + " Fac:" + this.Faction.ToString();
             }
 
             return string.Empty;

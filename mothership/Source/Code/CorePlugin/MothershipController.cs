@@ -29,7 +29,7 @@ namespace naves
         public void OnInit(InitContext context)
         {
             if (context != InitContext.Activate) return;
-            base.Init(this.GameObj.GetComponent<Transform>(), 5000, ShipTypeEnum.MotherShip, this.ArmyFaction);
+            base.Init(this.GameObj.GetComponent<Transform>(), 500, ShipTypeEnum.MotherShip, this.ArmyFaction);
 
             this.Text = this.GameObj.GetComponent<TextRenderer>();
             this.ShipsReleased = new List<Player>();
@@ -91,8 +91,11 @@ namespace naves
 
                     GameObject ship = ShipPrefab.Res.Instantiate(new Vector3(shipPos, 0), angle);
                     Player newPlayer = ship.GetComponent<Player>();
+   
                     newPlayer.Commander = order.ShipCommander;
                     newPlayer.MotherShip = this;
+                    newPlayer.ArmyFaction = this.ArmyFaction;
+                    newPlayer.KeyboardControl = false;
 
                     this.ShipsReleased.Add(newPlayer);
                     Scene.Current.AddObject(ship);

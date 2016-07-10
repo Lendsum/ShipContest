@@ -197,6 +197,7 @@
             </shapes>
           </item>
           <item dataType="Struct" type="naves.SpaceBagController" id="1395198759">
+            <_x003C_Text_x003E_k__BackingField />
             <active dataType="Bool">true</active>
             <camera dataType="Struct" type="Duality.Components.Transform" id="1901178774">
               <active dataType="Bool">true</active>
@@ -258,9 +259,40 @@
                       <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
                       <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
                     </item>
+                    <item dataType="Struct" type="Duality.Components.Renderers.TextRenderer" id="1283492664">
+                      <active dataType="Bool">true</active>
+                      <blockAlign dataType="Enum" type="Duality.Alignment" name="Center" value="0" />
+                      <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                        <A dataType="Byte">255</A>
+                        <B dataType="Byte">255</B>
+                        <G dataType="Byte">255</G>
+                        <R dataType="Byte">255</R>
+                      </colorTint>
+                      <customMat />
+                      <gameobj dataType="ObjectRef">3835831138</gameobj>
+                      <iconMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                        <contentPath />
+                      </iconMat>
+                      <offset dataType="Int">0</offset>
+                      <text dataType="Struct" type="Duality.Drawing.FormattedText" id="2955204260">
+                        <flowAreas />
+                        <fonts dataType="Array" type="Duality.ContentRef`1[[Duality.Resources.Font]][]" id="517984452">
+                          <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
+                            <contentPath dataType="String">Default:Font:GenericMonospace10</contentPath>
+                          </item>
+                        </fonts>
+                        <icons />
+                        <lineAlign dataType="Enum" type="Duality.Alignment" name="Left" value="1" />
+                        <maxHeight dataType="Int">0</maxHeight>
+                        <maxWidth dataType="Int">0</maxWidth>
+                        <sourceText dataType="String">Hello World</sourceText>
+                        <wrapMode dataType="Enum" type="Duality.Drawing.FormattedText+WrapMode" name="Word" value="1" />
+                      </text>
+                      <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+                    </item>
                   </_items>
-                  <_size dataType="Int">2</_size>
-                  <_version dataType="Int">4</_version>
+                  <_size dataType="Int">3</_size>
+                  <_version dataType="Int">5</_version>
                 </compList>
                 <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3747129632" surrogate="true">
                   <header />
@@ -268,10 +300,12 @@
                     <keys dataType="Array" type="System.Object[]" id="955383509">
                       <item dataType="Type" id="1594330614" value="Duality.Components.Transform" />
                       <item dataType="Type" id="879909914" value="Duality.Components.Camera" />
+                      <item dataType="Type" id="2998636310" value="Duality.Components.Renderers.TextRenderer" />
                     </keys>
                     <values dataType="Array" type="System.Object[]" id="4236977736">
                       <item dataType="ObjectRef">1901178774</item>
                       <item dataType="ObjectRef">78139649</item>
+                      <item dataType="ObjectRef">1283492664</item>
                     </values>
                   </body>
                 </compMap>
@@ -313,9 +347,10 @@
               </velAbs>
             </camera>
             <gameobj dataType="ObjectRef">192365404</gameobj>
+            <initialized dataType="Bool">true</initialized>
             <mother1 dataType="Struct" type="naves.MothershipController" id="3339513149">
               <_x003C_ArmyFaction_x003E_k__BackingField dataType="Int">2</_x003C_ArmyFaction_x003E_k__BackingField>
-              <_x003C_Faction_x003E_k__BackingField dataType="Int">0</_x003C_Faction_x003E_k__BackingField>
+              <_x003C_Faction_x003E_k__BackingField dataType="Int">2</_x003C_Faction_x003E_k__BackingField>
               <_x003C_Id_x003E_k__BackingField dataType="Int">2</_x003C_Id_x003E_k__BackingField>
               <_x003C_Life_x003E_k__BackingField dataType="Float">5000</_x003C_Life_x003E_k__BackingField>
               <_x003C_ShipPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -375,7 +410,7 @@
                         <active dataType="Bool">true</active>
                         <angularDamp dataType="Float">0.3</angularDamp>
                         <angularVel dataType="Float">0</angularVel>
-                        <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
+                        <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
                         <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
                         <colFilter />
                         <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
@@ -467,7 +502,7 @@
                         <item dataType="Type" id="979026652" value="Duality.Components.Renderers.SpriteRenderer" />
                         <item dataType="Type" id="362417430" value="Duality.Components.Physics.RigidBody" />
                         <item dataType="Type" id="2075607112" value="naves.MothershipController" />
-                        <item dataType="Type" id="3060623794" value="Duality.Components.Renderers.TextRenderer" />
+                        <item dataType="ObjectRef">2998636310</item>
                       </keys>
                       <values dataType="Array" type="System.Object[]" id="3179087502">
                         <item dataType="ObjectRef">2347836743</item>
@@ -536,7 +571,7 @@
             </mother1>
             <mother2 dataType="Struct" type="naves.MothershipController" id="3337511344">
               <_x003C_ArmyFaction_x003E_k__BackingField dataType="Int">1</_x003C_ArmyFaction_x003E_k__BackingField>
-              <_x003C_Faction_x003E_k__BackingField dataType="Int">0</_x003C_Faction_x003E_k__BackingField>
+              <_x003C_Faction_x003E_k__BackingField dataType="Int">1</_x003C_Faction_x003E_k__BackingField>
               <_x003C_Id_x003E_k__BackingField dataType="Int">3</_x003C_Id_x003E_k__BackingField>
               <_x003C_Life_x003E_k__BackingField dataType="Float">5000</_x003C_Life_x003E_k__BackingField>
               <_x003C_ShipPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -596,7 +631,7 @@
                         <active dataType="Bool">true</active>
                         <angularDamp dataType="Float">0.3</angularDamp>
                         <angularVel dataType="Float">0</angularVel>
-                        <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
+                        <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
                         <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
                         <colFilter />
                         <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
@@ -688,7 +723,7 @@
                         <item dataType="ObjectRef">979026652</item>
                         <item dataType="ObjectRef">362417430</item>
                         <item dataType="ObjectRef">2075607112</item>
-                        <item dataType="ObjectRef">3060623794</item>
+                        <item dataType="ObjectRef">2998636310</item>
                       </keys>
                       <values dataType="Array" type="System.Object[]" id="1972683648">
                         <item dataType="ObjectRef">2345834938</item>
@@ -996,7 +1031,7 @@
         <body>
           <keys dataType="Array" type="System.Object[]" id="2034562195">
             <item dataType="ObjectRef">1594330614</item>
-            <item dataType="ObjectRef">3060623794</item>
+            <item dataType="ObjectRef">2998636310</item>
             <item dataType="Type" id="2072852710" value="naves.ScoreText" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="2625496824">
@@ -1055,7 +1090,7 @@
             <item dataType="ObjectRef">979026652</item>
             <item dataType="ObjectRef">362417430</item>
             <item dataType="Type" id="3681580900" value="naves.Player" />
-            <item dataType="ObjectRef">3060623794</item>
+            <item dataType="ObjectRef">2998636310</item>
           </keys>
           <values dataType="Array" type="System.Object[]" id="906343478">
             <item dataType="ObjectRef">1035760988</item>

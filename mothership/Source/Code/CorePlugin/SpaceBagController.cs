@@ -20,6 +20,9 @@ namespace naves
         MothershipController mother1;
         MothershipController mother2;
         Transform camera;
+        private bool initialized;
+
+        public TextRenderer Text { get; private set; }
 
         public void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
@@ -51,11 +54,13 @@ namespace naves
 
             if (motherships != null && motherships.Count() == 2)
             {
-                this.mother1 = motherships[0].GetComponent<MothershipController>();
-                this.mother2 = motherships[1].GetComponent<MothershipController>();
+                this.mother1 = motherships[1].GetComponent<MothershipController>();
+                this.mother2 = motherships[0].GetComponent<MothershipController>();
             }
 
             this.camera = this?.GameObj?.ParentScene?.FindGameObject<Camera>().GetComponent<Transform>();
+            this.Text = this?.GameObj?.ParentScene.FindComponent<TextRenderer>();
+            this.initialized = true;
         }
 
         public void OnShutdown(ShutdownContext context)
@@ -65,15 +70,26 @@ namespace naves
 
         public void OnUpdate()
         {
-            if (DualityApp.Keyboard[Duality.Input.Key.Number1])
+            if (this.initialized)
             {
-                this.camera.Pos = new Vector3(mother1.TransformComponent.Pos.Xy, this.camera.Pos.Z);
-            }
+                if (DualityApp.Keyboard[Duality.Input.Key.Number1])
+                {
+                    this.camera.Pos = new Vector3(mother1.TransformComponent.Pos.Xy, this.camera.Pos.Z);
+                }
 
-            if (DualityApp.Keyboard[Duality.Input.Key.Number2])
-            {
-                this.camera.Pos = new Vector3(mother2.TransformComponent.Pos.Xy, this.camera.Pos.Z);
+                if (DualityApp.Keyboard[Duality.Input.Key.Number2])
+                {
+                    this.camera.Pos = new Vector3(mother2.TransformComponent.Pos.Xy, this.camera.Pos.Z);
+                }
+
+                this.Text.Text = new Duality.Drawing.FormattedText() { SourceText = this.GetText() };
             }
+        }
+
+        private string GetText()
+        {
+            return this.mother1.Almirant.Name + ":" + this.mother1.Life.ToString()
+                + this.mother2.Almirant.Name + ":" + this.mother2.Life.ToString();
         }
     }
 }

@@ -8,6 +8,7 @@ namespace naves.Almirants
 {
     public interface IAlmirant
     {
+        string Name { get; }
         void Refresh(RadarSystem radar, Hangar hangar);
     }
 }

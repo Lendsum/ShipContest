@@ -19,13 +19,13 @@ namespace naves
         public float Speed { get; set; } = 30f;
         private float m_LifetimeCounter;
 
-        public float LifeTime { get; set; } = 100f;
+        public float LifeTime { get; set; } = 20f;
         public GameObject Creator { get; set; }
 
         public float Damage { get; set; }
         public ScoreText ScoreText { get; private set; }
 
-        Player playerCreator;
+        ShipController playerCreator;
 
         public void OnInit(InitContext context)
         {
@@ -33,14 +33,14 @@ namespace naves
             m_Transform = GameObj.GetComponent<Transform>();
             m_RigidBody = GameObj.GetComponent<RigidBody>();
             this.ScoreText=GameObj.ParentScene.FindComponent<TextRenderer>().GameObj.GetComponent<ScoreText>();
-            playerCreator = Creator.GetComponent<Player>();
+            playerCreator = Creator.GetComponent<ShipController>();
         }
 
         public void OnUpdate()
         {
             m_RigidBody.LinearVelocity = Vector2.FromAngleLength(m_Transform.Angle, Speed);
             m_LifetimeCounter += Time.TimeMult;
-            if (m_LifetimeCounter > LifeTime)
+            if (m_LifetimeCounter > LifeTime || !InRage())
             {
                 //GameObj is a reference to this Components parent GameObject
                 Scene.Current.RemoveObject(GameObj);
@@ -60,20 +60,33 @@ namespace naves
             if (rigidBodyArgs != null && rigidBodyArgs.OtherShape.IsSensor) return;
             if (rigidBodyArgs == null) return;
 
+
             Scene.Current.RemoveObject(GameObj);
 
-            var playerAffected=rigidBodyArgs.CollideWith.GetComponent<Player>();
+            ShipController playerAffected=rigidBodyArgs.CollideWith.GetComponent<ShipController>();
             if (playerAffected != null)
             {
                 playerAffected.Life -= this.Damage;
                 if (playerAffected.Life < 0f)
                 {
-                     Scene.Current.RemoveObject(rigidBodyArgs.CollideWith);
-
-                    // update score.
-                    this.ScoreText.Text = this.ScoreText.Text + " - " + playerAffected.Commander?.Name + " by " + playerCreator.Commander.Name;
+                    Scene.Current.RemoveObject(rigidBodyArgs.CollideWith);
+                    var attackShip = playerAffected as Player;
+                    if (attackShip != null)
+                    {
+                        var toRemove = attackShip.MotherShip.ShipsReleased.Where(x => x.Id == attackShip.Id).FirstOrDefault();
+                        if (toRemove != null) attackShip.MotherShip.ShipsReleased.Remove(toRemove);
+                    }
                 }
             }
+        }
+
+        public bool InRage()
+        {
+            var distance = this.playerCreator.Position - this.m_Transform.Pos.Xy;
+            var a = distance.X;
+            var b = distance.Y;
+            var hipo = Math.Sqrt((a * a + b * b));
+            return hipo < 400;
         }
 
         public void OnCollisionEnd(Component sender, CollisionEventArgs args)

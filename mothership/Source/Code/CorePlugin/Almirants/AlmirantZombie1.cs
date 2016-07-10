@@ -9,6 +9,9 @@ namespace naves.Almirants
     public class AlmirantZombie1 : IAlmirant
     {
         int order = 1;
+
+        public string Name => "Fake";
+
         public void Refresh(RadarSystem radar, Hangar hangar)
         {
             if (hangar.ShipsReady > 1)
