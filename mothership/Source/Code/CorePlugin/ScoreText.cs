@@ -53,7 +53,7 @@ namespace naves
 
             this.Text = this.mother1.Almirant.Name +  ":" + this.mother1.Life.ToString() + " - "+ this.mother2.Almirant.Name +": " + this.mother2.Life;
 
-            if (destroyed != null) {
+            if (destroyed == null) {
                 if (this.mother1.Life < 0)
                 {
                     this.destroyed = this.mother1;

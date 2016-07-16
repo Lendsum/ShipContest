@@ -69,7 +69,7 @@ namespace naves
                 if (DualityApp.Keyboard[Key.Up])
                 {
                     //body.ApplyLocalForce(Vector2.UnitY * -0.20f * body.Mass);
-                    this.power.Acelerate(50);
+                    this.power.Acelerate(this.power.Available);
                 }
                 else if (DualityApp.Keyboard[Key.Down])
                 {
@@ -93,13 +93,13 @@ namespace naves
 
             if (this.AceleratePower != 0f)
             {
-                body.ApplyLocalForce(Vector2.UnitY * -(this.AceleratePower / 5) * body.Mass);
+                body.ApplyLocalForce(Vector2.UnitY * -(this.AceleratePower / 2) * body.Mass);
                 this.AceleratePower = 0f;
             }
 
             if (this.power.RotateRight!=0f)
             {
-                body.ApplyLocalForce(this.power.RotateRight/1000 * body.Inertia);
+                body.ApplyLocalForce(this.power.RotateRight/10000 * body.Inertia);
             }
             
             m_FiringDelayCounter += Time.TimeMult;

@@ -36,7 +36,7 @@
 [Core] Msg:   OpenAL (OpenTK)...
 [Core] Msg:     OpenAL Drivers not found. Using 64 Bit software fallback.
 [Core] Msg:     Available devices:
-                Speakers (Realtek High Definition Audio) (Default)
+                Headphones (High Definition Audio Device) (Default)
 [Core] Msg:     Current device: OpenAL Soft
 [Core] Msg:     OpenAL Version: 1.1 ALSOFT 1.15.1
                 Vendor: OpenAL Community
@@ -55,17 +55,17 @@
 [Core] Msg: Opening Window...
 [Core] Msg:   Window Specification: 
               Buffers: 2
-              Samples: 4
+              Samples: 16
               ColorFormat: 32 (8888)
               AccumulatorFormat: 64 (16161616)
               Depth: 24
-              Stencil: 8
+              Stencil: 0
               VSync: Off
               SwapInterval: 0
-[Core] Msg:   OpenGL Version: 3.1.0 - Build 9.17.10.4229
-              Vendor: Intel
-              Renderer: Intel(R) HD Graphics 3000
-              Shading Language Version: 1.40 - Intel Build 9.17.10.4229
+[Core] Msg:   OpenGL Version: 4.5.0 NVIDIA 361.43
+              Vendor: NVIDIA Corporation
+              Renderer: GeForce GTX 770/PCIe/SSE2
+              Shading Language Version: 4.50 NVIDIA
 [Core] Msg: Initializing default content...
 [Core] Msg:   Assembly loaded: System.Runtime.InteropServices
 [Core] Msg:   Assembly loaded: System.Collections.Concurrent
@@ -75,18 +75,16 @@
 [Core] Msg: Assembly loaded: FarseerDuality
 [Core] Msg: Loading Resource 'Data\MyFirstScene.Scene.res'
 [Core] Msg:   Loading Resource 'Data\Bullet.Prefab.res'
-[Core] Msg:   Loading Resource 'Data\Player.Prefab.res'
-[Core] Msg: Assembly loaded: Microsoft.VisualStudio.Debugger.Runtime
-[Core] Msg: Assembly loaded: System.Configuration
 [Core] Msg: Loading Resource 'Data\fondo.Material.res'
 [Core] Msg:   Loading Resource 'Data\fondo.Texture.res'
 [Core] Msg:     Loading Resource 'Data\fondo.Pixmap.res'
-[Core] Msg: Loading Resource 'Data\ShipOne.Material.res'
-[Core] Msg:   Loading Resource 'Data\ShipOne.Texture.res'
-[Core] Msg:     Loading Resource 'Data\ShipOne.Pixmap.res'
 [Core] Msg: Loading Resource 'Data\mothership.Material.res'
 [Core] Msg:   Loading Resource 'Data\mothership.Texture.res'
 [Core] Msg:     Loading Resource 'Data\mothership.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\Player.Prefab.res'
+[Core] Msg: Loading Resource 'Data\ShipOne.Material.res'
+[Core] Msg:   Loading Resource 'Data\ShipOne.Texture.res'
+[Core] Msg:     Loading Resource 'Data\ShipOne.Pixmap.res'
 [Core] Msg: Loading Resource 'Data\bulletOne.Material.res'
 [Core] Msg:   Loading Resource 'Data\bulletOne.Texture.res'
 [Core] Msg:     Loading Resource 'Data\bulletOne.Pixmap.res'

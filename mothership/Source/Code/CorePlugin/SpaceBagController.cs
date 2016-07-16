@@ -27,14 +27,14 @@ namespace naves
         public void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
             //We cast to RigidBodyCollisionEventArgs to get access to the info about the shapes involved.
-            var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
-            if (rigidBodyArgs != null && rigidBodyArgs.OtherShape.IsSensor) return;
-            if (rigidBodyArgs == null) return;
+            //var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
+            //if (rigidBodyArgs != null && rigidBodyArgs.OtherShape.IsSensor) return;
+            //if (rigidBodyArgs == null) return;
 
-            float x = random.Next(-50, 50);
-            float y = random.Next(-50, 50);
+            //float x = random.Next(-50, 50);
+            //float y = random.Next(-50, 50);
 
-            args.CollideWith.Transform.Pos = new Vector3(x, y, 0);
+            //args.CollideWith.Transform.Pos = new Vector3(x, y, 0);
         }
 
         public void OnCollisionEnd(Component sender, CollisionEventArgs args)

@@ -72,7 +72,7 @@
             <active dataType="Bool">true</active>
             <angularDamp dataType="Float">0.3</angularDamp>
             <angularVel dataType="Float">0</angularVel>
-            <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Static" value="0" />
+            <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
             <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
             <colFilter />
             <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
@@ -96,7 +96,7 @@
                   <friction dataType="Float">0.3</friction>
                   <parent dataType="ObjectRef">3255141928</parent>
                   <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
+                  <sensor dataType="Bool">true</sensor>
                   <vertices dataType="Array" type="Duality.Vector2[]" id="3840726980">
                     <item dataType="Struct" type="Duality.Vector2">
                       <X dataType="Float">-509.0056</X>
@@ -121,7 +121,7 @@
                   <friction dataType="Float">0.3</friction>
                   <parent dataType="ObjectRef">3255141928</parent>
                   <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
+                  <sensor dataType="Bool">true</sensor>
                   <vertices dataType="Array" type="Duality.Vector2[]" id="825508526">
                     <item dataType="Struct" type="Duality.Vector2">
                       <X dataType="Float">-511.963257</X>
@@ -146,7 +146,7 @@
                   <friction dataType="Float">0.3</friction>
                   <parent dataType="ObjectRef">3255141928</parent>
                   <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
+                  <sensor dataType="Bool">true</sensor>
                   <vertices dataType="Array" type="Duality.Vector2[]" id="3919472904">
                     <item dataType="Struct" type="Duality.Vector2">
                       <X dataType="Float">511.3964</X>
@@ -171,7 +171,7 @@
                   <friction dataType="Float">0.3</friction>
                   <parent dataType="ObjectRef">3255141928</parent>
                   <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
+                  <sensor dataType="Bool">true</sensor>
                   <vertices dataType="Array" type="Duality.Vector2[]" id="2529665138">
                     <item dataType="Struct" type="Duality.Vector2">
                       <X dataType="Float">-509.4508</X>
@@ -351,7 +351,7 @@
             <mother1 dataType="Struct" type="naves.MothershipController" id="3337511344">
               <_x003C_ArmyFaction_x003E_k__BackingField dataType="Int">1</_x003C_ArmyFaction_x003E_k__BackingField>
               <_x003C_Faction_x003E_k__BackingField dataType="Int">1</_x003C_Faction_x003E_k__BackingField>
-              <_x003C_Id_x003E_k__BackingField dataType="Int">2</_x003C_Id_x003E_k__BackingField>
+              <_x003C_Id_x003E_k__BackingField dataType="Int">3</_x003C_Id_x003E_k__BackingField>
               <_x003C_Life_x003E_k__BackingField dataType="Float">500</_x003C_Life_x003E_k__BackingField>
               <_x003C_ShipPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
                 <contentPath dataType="String">Data\Player.Prefab.res</contentPath>
@@ -572,7 +572,7 @@
             <mother2 dataType="Struct" type="naves.MothershipController" id="3339513149">
               <_x003C_ArmyFaction_x003E_k__BackingField dataType="Int">2</_x003C_ArmyFaction_x003E_k__BackingField>
               <_x003C_Faction_x003E_k__BackingField dataType="Int">2</_x003C_Faction_x003E_k__BackingField>
-              <_x003C_Id_x003E_k__BackingField dataType="Int">1</_x003C_Id_x003E_k__BackingField>
+              <_x003C_Id_x003E_k__BackingField dataType="Int">2</_x003C_Id_x003E_k__BackingField>
               <_x003C_Life_x003E_k__BackingField dataType="Float">500</_x003C_Life_x003E_k__BackingField>
               <_x003C_ShipPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
                 <contentPath dataType="String">Data\Player.Prefab.res</contentPath>
