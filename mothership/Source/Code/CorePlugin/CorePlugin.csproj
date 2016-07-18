@@ -57,18 +57,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almirants\AlmirantFran.cs" />
+    <Compile Include="Almirants\AlmirantRush.cs" />
     <Compile Include="Almirants\AlmirantZombie1.cs" />
+    <Compile Include="Almirants\FranStaticOrchestrator.cs" />
     <Compile Include="Almirants\Hangar.cs" />
     <Compile Include="Almirants\IAlmirant.cs" />
     <Compile Include="Almirants\IHangar.cs" />
+    <Compile Include="Almirants\LucioAlmirant.cs" />
+    <Compile Include="Almirants\LucioCommander.cs" />
+    <Compile Include="Almirants\PabloAlmirant.cs" />
+    <Compile Include="Almirants\PabloAttackCommander.cs" />
+    <Compile Include="Almirants\PabloDefenseCommander.cs" />
     <Compile Include="Almirants\ReleaseOrder.cs" />
+    <Compile Include="Almirants\RushCommander.cs" />
     <Compile Include="BulletController.cs" />
     <Compile Include="commanders\Configuration.cs" />
     <Compile Include="commanders\FinalPidController.cs" />
-    <Compile Include="commanders\FirstCommnader.cs" />
-    <Compile Include="commanders\FranCommander.cs" />
-    <Compile Include="commanders\LucioCommander.cs" />
-    <Compile Include="commanders\RikiNhOCommander.cs" />
+    <Compile Include="commanders\FranCommanderAt.cs" />
+    <Compile Include="commanders\FranCommanderDef.cs" />
+    <Compile Include="commanders\FranFinalPidController.cs" />
     <Compile Include="CorePlugin.cs" />
     <Compile Include="Counter.cs" />
     <Compile Include="ICommander.cs" />

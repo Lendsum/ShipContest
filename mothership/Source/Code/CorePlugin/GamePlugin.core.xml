@@ -14,14 +14,6 @@
             Set your ship commander before launch
             </summary>
         </member>
-        <member name="P:naves.FirstCommander.Name">
-            <summary>
-            Gets or sets the name.
-            </summary>
-            <value>
-            The name.
-            </value>
-        </member>
         <member name="P:naves.LucioCommander.Name">
             <summary>
             Gets or sets the name.
@@ -30,7 +22,39 @@
             The name.
             </value>
         </member>
-        <member name="P:naves.RikiNhOComander.Name">
+        <member name="P:naves.PabloAttackCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:naves.PabloDefenseCommander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:naves.RushComander.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:naves.FranCommanderAt.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:naves.FranCommanderDef.Name">
             <summary>
             Gets or sets the name.
             </summary>

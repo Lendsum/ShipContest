@@ -528,13 +528,13 @@
                 <ignoreParent dataType="Bool">false</ignoreParent>
                 <parentTransform />
                 <pos dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-409.434082</X>
-                  <Y dataType="Float">286.737335</Y>
+                  <X dataType="Float">-710.125549</X>
+                  <Y dataType="Float">-709.30304</Y>
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-409.434082</X>
-                  <Y dataType="Float">286.737335</Y>
+                  <X dataType="Float">-710.125549</X>
+                  <Y dataType="Float">-709.30304</Y>
                   <Z dataType="Float">0</Z>
                 </posAbs>
                 <scale dataType="Float">0.2</scale>
@@ -749,13 +749,13 @@
                 <ignoreParent dataType="Bool">false</ignoreParent>
                 <parentTransform />
                 <pos dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">284.140472</X>
-                  <Y dataType="Float">-405.764069</Y>
+                  <X dataType="Float">710.12</X>
+                  <Y dataType="Float">709.3</Y>
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">284.140472</X>
-                  <Y dataType="Float">-405.764069</Y>
+                  <X dataType="Float">710.12</X>
+                  <Y dataType="Float">709.3</Y>
                   <Z dataType="Float">0</Z>
                 </posAbs>
                 <scale dataType="Float">0.2</scale>
