@@ -97,7 +97,8 @@ namespace naves
 
             if (AimingObjective(targetAngle, currentAngle, turnOutput) &&
                 !AimingAtOwnMothership(navigation) && 
-                power.Available > 5)
+                power.Available > 5 && 
+                IsEnemyCloseEnoughToFire(target, navigation))
             {
                 power.Fire(power.Available >= target.Life ? target.Life + 1 : power.Available);
             }
@@ -133,7 +134,7 @@ namespace naves
 
             if (OutputNearZero(targetAngle, currentAngle, turnOutput) && navigation.Speed.Length < 2)
             {
-                power.Acelerate(power.Available > 20 ? 20 : power.Available);
+                power.Acelerate(power.Available > 10 ? 10 : power.Available);
             }
         }
 
