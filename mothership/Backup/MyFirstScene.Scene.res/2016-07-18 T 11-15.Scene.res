@@ -528,13 +528,13 @@
                 <ignoreParent dataType="Bool">false</ignoreParent>
                 <parentTransform />
                 <pos dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-413.096069</X>
-                  <Y dataType="Float">715.190857</Y>
+                  <X dataType="Float">-409.434082</X>
+                  <Y dataType="Float">286.737335</Y>
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-413.096069</X>
-                  <Y dataType="Float">715.190857</Y>
+                  <X dataType="Float">-409.434082</X>
+                  <Y dataType="Float">286.737335</Y>
                   <Z dataType="Float">0</Z>
                 </posAbs>
                 <scale dataType="Float">0.2</scale>
@@ -552,17 +552,8 @@
               </_x003C_TransformComponent_x003E_k__BackingField>
               <_x003C_Type_x003E_k__BackingField dataType="Enum" type="naves.ShipTypeEnum" name="MotherShip" value="2" />
               <active dataType="Bool">true</active>
-              <Almirant dataType="Struct" type="naves.Almirants.AlmirantFran" id="1723220659">
-                <allPossibleDirections dataType="Array" type="naves.Almirants.CardinalInitialPosition[]" id="858349988">
-                  <item dataType="Enum" type="naves.Almirants.CardinalInitialPosition" name="North" value="1" />
-                  <item dataType="Enum" type="naves.Almirants.CardinalInitialPosition" name="East" value="2" />
-                  <item dataType="Enum" type="naves.Almirants.CardinalInitialPosition" name="South" value="3" />
-                  <item dataType="Enum" type="naves.Almirants.CardinalInitialPosition" name="West" value="4" />
-                </allPossibleDirections>
-                <attackShipsReleased dataType="Int">0</attackShipsReleased>
-                <bestDirections />
-                <defShipsReleased dataType="Int">0</defShipsReleased>
-                <directionToRelease dataType="Enum" type="naves.Almirants.CardinalInitialPosition" name="North" value="1" />
+              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="1723220659">
+                <order dataType="Int">1</order>
               </Almirant>
               <gameobj dataType="ObjectRef">4280487302</gameobj>
               <Hangar dataType="Struct" type="naves.Almirants.Hangar" id="1817625590">
@@ -758,13 +749,13 @@
                 <ignoreParent dataType="Bool">false</ignoreParent>
                 <parentTransform />
                 <pos dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-382.342865</X>
-                  <Y dataType="Float">-303.22818</Y>
+                  <X dataType="Float">284.140472</X>
+                  <Y dataType="Float">-405.764069</Y>
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-382.342865</X>
-                  <Y dataType="Float">-303.22818</Y>
+                  <X dataType="Float">284.140472</X>
+                  <Y dataType="Float">-405.764069</Y>
                   <Z dataType="Float">0</Z>
                 </posAbs>
                 <scale dataType="Float">0.2</scale>
@@ -782,7 +773,7 @@
               </_x003C_TransformComponent_x003E_k__BackingField>
               <_x003C_Type_x003E_k__BackingField dataType="Enum" type="naves.ShipTypeEnum" name="MotherShip" value="2" />
               <active dataType="Bool">true</active>
-              <Almirant dataType="Struct" type="naves.Almirants.LucioAlmirant" id="2028180852">
+              <Almirant dataType="Struct" type="naves.Almirants.AlmirantZombie1" id="2028180852">
                 <order dataType="Int">1</order>
               </Almirant>
               <gameobj dataType="ObjectRef">4282489107</gameobj>

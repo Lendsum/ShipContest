@@ -95,7 +95,7 @@ namespace naves
                     newPlayer.Commander = order.ShipCommander;
                     newPlayer.MotherShip = this;
                     newPlayer.ArmyFaction = this.ArmyFaction;
-                    newPlayer.KeyboardControl = true;
+                    newPlayer.KeyboardControl = false;
 
                     this.ShipsReleased.Add(newPlayer);
                     Scene.Current.AddObject(ship);

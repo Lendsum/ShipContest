@@ -79,6 +79,5 @@ C:\git\ShipContest\mothership\Source\Code\CorePlugin\bin\Debug\DualityPrimitives
 C:\git\ShipContest\mothership\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
 C:\git\ShipContest\mothership\Source\Code\CorePlugin\bin\Debug\FarseerDuality.pdb
 C:\git\ShipContest\mothership\Source\Code\CorePlugin\bin\Debug\FarseerDuality.xml
-C:\git\ShipContest\mothership\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache
 C:\git\ShipContest\mothership\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
 C:\git\ShipContest\mothership\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb

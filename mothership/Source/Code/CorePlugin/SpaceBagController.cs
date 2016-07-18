@@ -3,6 +3,7 @@ using Duality.Components;
 using Duality.Components.Physics;
 using Duality.Components.Renderers;
 using Duality.Resources;
+using naves.Almirants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,7 +56,11 @@ namespace naves
             if (motherships != null && motherships.Count() == 2)
             {
                 this.mother1 = motherships[1].GetComponent<MothershipController>();
+                //this.mother1.Almirant = new PabloAlmirant();
+                this.mother1.Almirant = new AlmirantFran();
                 this.mother2 = motherships[0].GetComponent<MothershipController>();
+                //this.mother2.Almirant = new AlmirantRush();
+                this.mother2.Almirant = new LucioAlmirant();
             }
 
             this.camera = this?.GameObj?.ParentScene?.FindGameObject<Camera>().GetComponent<Transform>();
